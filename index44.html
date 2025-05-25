@@ -26,22 +26,29 @@
     }
 
     main {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 2rem auto;
       padding: 1rem;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
     }
 
     .article-card {
       background-color: white;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      overflow: hidden;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .article-title {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin: 0 0 0.5rem;
       color: #004466;
     }
@@ -53,21 +60,21 @@
     }
 
     .article-authors {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-style: italic;
-      margin: 0.5rem 0 1rem;
+      margin-bottom: 0.8rem;
     }
 
     .article-image, video {
       width: 100%;
       height: auto;
-      margin: 1rem 0;
+      margin: 0.5rem 0 1rem;
       border-radius: 8px;
     }
 
     .article-description {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
 
     footer {
@@ -77,6 +84,12 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -85,134 +98,124 @@
   </header>
 
   <main>
+    <div class="grid-container">
 
-    <!-- Article 1 -->
-    <article class="article-card">
-      <h3 class="article-title">
-        Association of Demographic and Occupational Factors with SARS-CoV-2 Vaccine Uptake in Kenya
-        <span class="citation-count">(cited: 18 times)</span>
-      </h3>
-      <p class="article-authors">Bertha A. Ocholla, Obed Nyangena, Herbert K. Murayi, Jane W. Mwangi, Steve K. Belle, Phanice Ondeko, Rebecca Kendagor</p>
-      <img id="previewImage" src="images/Icon/Coronavirus.jpg" alt="Article Image" />
-      <video id="articleVideo" muted loop playsinline style="display:none;">
-        <source src="images/Icon/6130030-hd_1920_1080_30fps.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <script>
-        window.addEventListener('load', () => {
-          setTimeout(() => {
-            document.getElementById('previewImage').style.display = 'none';
-            const video = document.getElementById('articleVideo');
-            video.style.display = 'block';
-            video.play().catch(error => {
-              console.log('Video play failed:', error);
-            });
-          }, 1000);
-        });
-      </script>
-      <p class="article-description">
-        We examine initial measures to curb COVID-19 spread in Kenya using demographic and occupational lenses and offer metricized recommendations for government action.
-        Cited by multiple studies, article highlights critical insights into public health policy during emergencies and uncertainty.
-      </p>
-    </article>
+      <!-- Article 1 -->
+      <article class="article-card">
+        <h3 class="article-title">
+          Association of Demographic and Occupational Factors with SARS-CoV-2 Vaccine Uptake in Kenya
+          <span class="citation-count">(cited: 18 times)</span>
+        </h3>
+        <p class="article-authors">Bertha A. Ocholla, Obed Nyangena, et al.</p>
+        <img id="previewImage" src="images/Icon/Coronavirus.jpg" alt="Article Image" />
+        <video id="articleVideo" muted loop playsinline style="display:none;">
+          <source src="images/Icon/6130030-hd_1920_1080_30fps.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <script>
+          window.addEventListener('load', () => {
+            setTimeout(() => {
+              document.getElementById('previewImage').style.display = 'none';
+              const video = document.getElementById('articleVideo');
+              video.style.display = 'block';
+              video.play().catch(error => {
+                console.log('Video play failed:', error);
+              });
+            }, 1000);
+          });
+        </script>
+        <p class="article-description">
+          We examine initial COVID-19 control measures in Kenya, assessing demographic and occupational influence on vaccine uptake.
+        </p>
+      </article>
 
-    <!-- Article 2 -->
-    <article class="article-card">
-      <h3 class="article-title">
-        Climate Change-Urbanization Nexus: Exploring the Contribution of Urbanization on Carbon Emissions in East Africa
-        <span class="citation-count">(cited: 25 times)</span>
-      </h3>
-      <p class="article-authors">Obed Nyangena, Victor Kidake & Benson S. Igesa</p>
-      <img class="article-image" src="images/Icon/Urbanisation.jpg" alt="Urbanization Article Image" />
-      <p class="article-description">
-        Using panel data and advanced econometric models, we find urbanization and economic growth as key contributors to carbon emissions in East Africa,
-        challenging narratives of Africa’s passive role in climate change.
-        Recommendations call for modernization in economic planning.
-      </p>
-    </article>
+      <!-- Article 2 -->
+      <article class="article-card">
+        <h3 class="article-title">
+          Climate Change-Urbanization Nexus: Exploring the Contribution of Urbanization on Carbon Emissions in East Africa
+          <span class="citation-count">(cited: 25 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena, Victor Kidake & Benson S. Igesa</p>
+        <img class="article-image" src="images/Icon/Urbanisation.jpg" alt="Urbanization Article" />
+        <p class="article-description">
+          Urbanization and economic growth are significant carbon emission drivers in East Africa. We suggest planning reform.
+        </p>
+      </article>
 
-    <!-- Article 3 -->
-    <article class="article-card">
-      <h3 class="article-title">
-        Linking Weather Variability and Economic Growth in the East African Region
-        <span class="citation-count">(cited: 15 times)</span>
-      </h3>
-      <p class="article-authors">Obed Nyangena, Victor Kidake & Benson S. Igesa</p>
-      <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Urbanisation.jpg">
-        <source src="images/Icon/12009144_1920_1080_24fps.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <p class="article-description">
-        We dissect inaccuracies around climate change narratives in Africa using panel data and conduct urbanization-carbon emissions model analysis.
-        We conclude that East Africa is a significant emitter due to urbanization and recommend modernization in economic planning.
-      </p>
-    </article>
+      <!-- Article 3 -->
+      <article class="article-card">
+        <h3 class="article-title">
+          Linking Weather Variability and Economic Growth in the East African Region
+          <span class="citation-count">(cited: 15 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena, Victor Kidake & Benson S. Igesa</p>
+        <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Urbanisation.jpg">
+          <source src="images/Icon/12009144_1920_1080_24fps.mp4" type="video/mp4" />
+        </video>
+        <p class="article-description">
+          Our study reveals how unpredictable weather patterns influence GDP fluctuations and recommends adaptive strategies.
+        </p>
+      </article>
 
-    <!-- Article 4 -->
-    <article class="article-card">
-      <h3 class="article-title">
-        Linking Climate Change, Pollinators and Cereal Yields in Kenya
-        <span class="citation-count">(cited: 10 times)</span>
-      </h3>
-      <p class="article-authors">Obed Nyangena, Victor Kidake Senelwa, Rachel Ngesa</p>
-      <video class="article-image" autoplay muted loop playsinline>
-        <source src="images/Icon/Wheat.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <p class="article-description">
-        Our study links climate shifts, pollinators, and cereal yields using long-term data.
-        Findings emphasize the crucial role of pollinators in food security and the impact of climate on cereal production.
-      </p>
-    </article>
+      <!-- Article 4 -->
+      <article class="article-card">
+        <h3 class="article-title">
+          Linking Climate Change, Pollinators and Cereal Yields in Kenya
+          <span class="citation-count">(cited: 10 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena, Victor Kidake Senelwa, Rachel Ngesa</p>
+        <video class="article-image" autoplay muted loop playsinline>
+          <source src="images/Icon/Wheat.mp4" type="video/mp4" />
+        </video>
+        <p class="article-description">
+          Climate shifts and pollinator dynamics are crucial to food security. We advocate integrating biodiversity in planning.
+        </p>
+      </article>
 
-    <!-- Article 5 -->
-    <article class="article-card">
-      <h3 class="article-title">
-        The Impact of Weather Variability on Economic Growth in Kenya
-        <span class="citation-count">(cited: 22 times)</span>
-      </h3>
-      <p class="article-authors">Obed Nyangena</p>
-      <video class="article-image" autoplay muted loop playsinline>
-        <source src="images/Icon/Weather.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <p class="article-description">
-        Employing a Vector Error Correction Model, this study finds nuanced relationships between rainfall, temperature, and GDP growth in Kenya.
-        It emphasizes the importance of timely policy measures to address short-term economic implications of climate variability.
-      </p>
-    </article>
+      <!-- Article 5 -->
+      <article class="article-card">
+        <h3 class="article-title">
+          The Impact of Weather Variability on Economic Growth in Kenya
+          <span class="citation-count">(cited: 22 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena</p>
+        <video class="article-image" autoplay muted loop playsinline>
+          <source src="images/Icon/Weather.mp4" type="video/mp4" />
+        </video>
+        <p class="article-description">
+          Using time series models, we analyze rainfall, temperature and GDP relationships. Adaptive economic policies recommended.
+        </p>
+      </article>
 
-    <!-- Article 6 -->
-    <article class="article-card">
-      <h3 class="article-title">
-        Drought and Floods: The Triad of Climate Change Adaptation, Gender and Devolution in Kenya
-        <span class="citation-count">(cited: 17 times)</span>
-      </h3>
-      <p class="article-authors">Obed Nyangena, Nancy Wairimu</p>
-      <img class="article-image" src="images/Icon/article.png" alt="Drought Article Image" />
-      <p class="article-description">
-        This chapter explores the interaction between gender roles, climate change, and decentralized governance in Kenya.
-        It translates institutional reflections into a published framework for resilience-building.
-      </p>
-    </article>
+      <!-- Article 6 -->
+      <article class="article-card">
+        <h3 class="article-title">
+          Drought and Floods: Climate Change, Gender, and Devolution in Kenya
+          <span class="citation-count">(cited: 17 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena, Nancy Wairimu</p>
+        <img class="article-image" src="images/Icon/article.png" alt="Drought Image" />
+        <p class="article-description">
+          This study outlines how climate adaptation intersects with gender equity and local governance structures.
+        </p>
+      </article>
 
-    <!-- Article 7 -->
-    <article class="article-card">
-      <h3 class="article-title">
-        Digital Fragility, Assorted Risks and Terrorism Confluence
-        <span class="citation-count">(cited: 20 times)</span>
-      </h3>
-      <p class="article-authors">Obed Nyangena & Mavia Imbali</p>
-      <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Terrorism.jpg">
-        <source src="images/Icon/Terrorism.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <p class="article-description">
-        This article provides a discursive relationship between digital leakages and gains as economies, individuals and groups jockey to advance their objectives.
-        Data protection and privacy frameworks reveal inadequacy in catching up with new technological improvements as risks soar.
-      </p>
-    </article>
+      <!-- Article 7 -->
+      <article class="article-card">
+        <h3 class="article-title">
+          Digital Fragility, Assorted Risks and Terrorism Confluence
+          <span class="citation-count">(cited: 20 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena & Mavia Imbali</p>
+        <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Terrorism.jpg">
+          <source src="images/Icon/Terrorism.mp4" type="video/mp4" />
+        </video>
+        <p class="article-description">
+          We analyze how digital vulnerabilities intersect with terrorism risks, calling for faster regulatory evolution.
+        </p>
+      </article>
 
+    </div>
   </main>
 
   <footer>
