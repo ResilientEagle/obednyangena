@@ -43,58 +43,45 @@
     }
 
     main {
-      padding: 3rem 2rem;
+      padding: 4rem 2rem 2rem;
       max-width: 1200px;
       margin: 0 auto;
-      background-color: #f0f2f5; /* Added for contrast */
+      background-color: #f0f2f5;
     }
 
     h2.page-title {
       color: #1d3557;
       font-weight: 800;
       font-size: 2.4rem;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       text-align: center;
     }
 
     .articles-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3rem; /* Increased spacing between cards */
-    }
-
-    @media (max-width: 960px) {
-      .articles-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .articles-grid {
-        grid-template-columns: 1fr;
-      }
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
     }
 
     .article-card {
-      background: #ffffff; /* Changed to white */
+      background: #ffffff;
       border-radius: 12px;
       padding: 1.5rem;
-      margin: 1rem 0; /* Extra vertical spacing */
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       display: flex;
       flex-direction: column;
-      height: 100%;
+      transition: transform 0.2s;
+    }
+
+    .article-card:hover {
+      transform: translateY(-5px);
     }
 
     .article-title {
       font-weight: 700;
       font-size: 1.25rem;
       color: #1d3557;
-      margin-bottom: 0.25rem;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      margin-bottom: 0.5rem;
     }
 
     .citation-count {
@@ -104,12 +91,10 @@
     }
 
     .article-authors {
-      font-weight: 400;
       font-size: 0.9rem;
       color: #555555;
-      margin-bottom: 1rem;
       font-style: italic;
-      flex-shrink: 0;
+      margin-bottom: 1rem;
     }
 
     .article-image {
@@ -118,8 +103,7 @@
       object-fit: cover;
       border-radius: 12px;
       margin-bottom: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .article-description {
@@ -131,7 +115,7 @@
 
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 2.5rem 1rem;
       background-color: #0f1e33;
       color: white;
       margin-top: 4rem;
@@ -160,8 +144,37 @@
     <h2 class="page-title">Publications</h2>
 
     <div class="articles-grid">
-      <!-- Your article cards remain unchanged -->
-      <!-- [You can leave the article HTML content the same as in your original post] -->
+      <!-- Repeat this block for each article -->
+      <div class="article-card">
+        <img src="sample-image.jpg" alt="Article Image" class="article-image">
+        <div class="article-title">Title of the Article One</div>
+        <div class="article-authors">Author A, Author B, Author C</div>
+        <div class="article-description">
+          A brief summary of the research or article goes here. It explains the context and findings in a concise way.
+        </div>
+        <div class="citation-count">Citations: 45</div>
+      </div>
+
+      <div class="article-card">
+        <img src="sample-image.jpg" alt="Article Image" class="article-image">
+        <div class="article-title">Title of the Article Two</div>
+        <div class="article-authors">Author X, Author Y, Author Z</div>
+        <div class="article-description">
+          Summary of another academic paper describing the topic and contributions. Could include journal and year.
+        </div>
+        <div class="citation-count">Citations: 88</div>
+      </div>
+
+      <div class="article-card">
+        <img src="sample-image.jpg" alt="Article Image" class="article-image">
+        <div class="article-title">Title of the Article Three</div>
+        <div class="article-authors">Author M, Author N</div>
+        <div class="article-description">
+          Highlights key points of the article including its significance in the field and unique methodology.
+        </div>
+        <div class="citation-count">Citations: 120</div>
+      </div>
+      <!-- Add more cards here -->
     </div>
   </main>
 
