@@ -2,190 +2,221 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Publications | Obed Nyangena</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Obed Nyangena - Publications</title>
   <style>
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #1a1a1a;
+      padding: 0;
     }
 
     header {
-      background-color: #111827;
+      background-color: #006699;
       color: white;
       padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 800;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.3s ease;
-    }
-
-    nav a:hover {
-      opacity: 0.7;
-    }
-
-    main {
-      padding: 4rem 2rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      background-color: #f0f2f5;
-    }
-
-    h2.page-title {
-      color: #1d3557;
-      font-weight: 800;
-      font-size: 2.4rem;
-      margin-bottom: 3rem;
       text-align: center;
     }
 
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2.5rem;
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
     }
 
     .article-card {
-      background: #ffffff;
-      border-radius: 12px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
       padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s;
-    }
-
-    .article-card:hover {
-      transform: translateY(-5px);
+      overflow: hidden;
     }
 
     .article-title {
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: #1d3557;
-      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem;
+      color: #004466;
     }
 
     .citation-count {
-      color: red;
-      font-weight: 800;
-      font-size: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+      margin-left: 10px;
     }
 
     .article-authors {
-      font-size: 0.9rem;
-      color: #555555;
+      font-size: 1rem;
       font-style: italic;
-      margin-bottom: 1rem;
+      margin: 0.5rem 0 1rem;
     }
 
-    .article-image {
+    .article-image, video {
       width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      height: auto;
+      margin: 1rem 0;
+      border-radius: 8px;
     }
 
     .article-description {
       font-size: 1rem;
-      line-height: 1.5;
-      color: #333333;
-      flex-grow: 1;
+      line-height: 1.6;
     }
 
     footer {
+      background-color: #003344;
+      color: #eee;
       text-align: center;
-      padding: 2.5rem 1rem;
-      background-color: #0f1e33;
-      color: white;
-      margin-top: 4rem;
-    }
-
-    footer a {
-      color: #aadfff;
-      text-decoration: none;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Obed Nyangena</h1>
-    <nav>
-      <a href="index43.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="#">Toolset</a>
-      <a href="projects.html">Projects</a>
-      <a href="publications.html">Publications</a>
-      <a href="#">Contact</a>
-    </nav>
+    <h1>Obed Nyangena - Selected Publications</h1>
   </header>
 
   <main>
-    <h2 class="page-title">Publications</h2>
 
-    <div class="articles-grid">
-      <!-- Repeat this block for each article -->
-      <div class="article-card">
-        <img src="sample-image.jpg" alt="Article Image" class="article-image">
-        <div class="article-title">Title of the Article One</div>
-        <div class="article-authors">Author A, Author B, Author C</div>
-        <div class="article-description">
-          A brief summary of the research or article goes here. It explains the context and findings in a concise way.
-        </div>
-        <div class="citation-count">Citations: 45</div>
-      </div>
+    <!-- Article 1 -->
+    <article class="article-card">
+      <h3 class="article-title">
+        Association of Demographic and Occupational Factors with SARS-CoV-2 Vaccine Uptake in Kenya
+        <span class="citation-count">(cited: 18 times)</span>
+      </h3>
+      <p class="article-authors">Bertha A. Ocholla, Obed Nyangena, Herbert K. Murayi, Jane W. Mwangi, Steve K. Belle, Phanice Ondeko, Rebecca Kendagor</p>
+      <img id="previewImage" src="images/Icon/Coronavirus.jpg" alt="Article Image" />
+      <video id="articleVideo" muted loop playsinline style="display:none;">
+        <source src="images/Icon/6130030-hd_1920_1080_30fps.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <script>
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            document.getElementById('previewImage').style.display = 'none';
+            const video = document.getElementById('articleVideo');
+            video.style.display = 'block';
+            video.play().catch(error => {
+              console.log('Video play failed:', error);
+            });
+          }, 1000);
+        });
+      </script>
+      <p class="article-description">
+        We examine initial measures to curb COVID-19 spread in Kenya using demographic and occupational lenses and offer metricized recommendations for government action.
+        Cited by multiple studies, article highlights critical insights into public health policy during emergencies and uncertainty.
+      </p>
+    </article>
 
-      <div class="article-card">
-        <img src="sample-image.jpg" alt="Article Image" class="article-image">
-        <div class="article-title">Title of the Article Two</div>
-        <div class="article-authors">Author X, Author Y, Author Z</div>
-        <div class="article-description">
-          Summary of another academic paper describing the topic and contributions. Could include journal and year.
-        </div>
-        <div class="citation-count">Citations: 88</div>
-      </div>
+    <!-- Article 2 -->
+    <article class="article-card">
+      <h3 class="article-title">
+        Climate Change-Urbanization Nexus: Exploring the Contribution of Urbanization on Carbon Emissions in East Africa
+        <span class="citation-count">(cited: 25 times)</span>
+      </h3>
+      <p class="article-authors">Obed Nyangena, Victor Kidake & Benson S. Igesa</p>
+      <img class="article-image" src="images/Icon/Urbanisation.jpg" alt="Urbanization Article Image" />
+      <p class="article-description">
+        Using panel data and advanced econometric models, we find urbanization and economic growth as key contributors to carbon emissions in East Africa,
+        challenging narratives of Africa’s passive role in climate change.
+        Recommendations call for modernization in economic planning.
+      </p>
+    </article>
 
-      <div class="article-card">
-        <img src="sample-image.jpg" alt="Article Image" class="article-image">
-        <div class="article-title">Title of the Article Three</div>
-        <div class="article-authors">Author M, Author N</div>
-        <div class="article-description">
-          Highlights key points of the article including its significance in the field and unique methodology.
-        </div>
-        <div class="citation-count">Citations: 120</div>
-      </div>
-      <!-- Add more cards here -->
-    </div>
+    <!-- Article 3 -->
+    <article class="article-card">
+      <h3 class="article-title">
+        Linking Weather Variability and Economic Growth in the East African Region
+        <span class="citation-count">(cited: 15 times)</span>
+      </h3>
+      <p class="article-authors">Obed Nyangena, Victor Kidake & Benson S. Igesa</p>
+      <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Urbanisation.jpg">
+        <source src="images/Icon/12009144_1920_1080_24fps.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p class="article-description">
+        We dissect inaccuracies around climate change narratives in Africa using panel data and conduct urbanization-carbon emissions model analysis.
+        We conclude that East Africa is a significant emitter due to urbanization and recommend modernization in economic planning.
+      </p>
+    </article>
+
+    <!-- Article 4 -->
+    <article class="article-card">
+      <h3 class="article-title">
+        Linking Climate Change, Pollinators and Cereal Yields in Kenya
+        <span class="citation-count">(cited: 10 times)</span>
+      </h3>
+      <p class="article-authors">Obed Nyangena, Victor Kidake Senelwa, Rachel Ngesa</p>
+      <video class="article-image" autoplay muted loop playsinline>
+        <source src="images/Icon/Wheat.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p class="article-description">
+        Our study links climate shifts, pollinators, and cereal yields using long-term data.
+        Findings emphasize the crucial role of pollinators in food security and the impact of climate on cereal production.
+      </p>
+    </article>
+
+    <!-- Article 5 -->
+    <article class="article-card">
+      <h3 class="article-title">
+        The Impact of Weather Variability on Economic Growth in Kenya
+        <span class="citation-count">(cited: 22 times)</span>
+      </h3>
+      <p class="article-authors">Obed Nyangena</p>
+      <video class="article-image" autoplay muted loop playsinline>
+        <source src="images/Icon/Weather.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p class="article-description">
+        Employing a Vector Error Correction Model, this study finds nuanced relationships between rainfall, temperature, and GDP growth in Kenya.
+        It emphasizes the importance of timely policy measures to address short-term economic implications of climate variability.
+      </p>
+    </article>
+
+    <!-- Article 6 -->
+    <article class="article-card">
+      <h3 class="article-title">
+        Drought and Floods: The Triad of Climate Change Adaptation, Gender and Devolution in Kenya
+        <span class="citation-count">(cited: 17 times)</span>
+      </h3>
+      <p class="article-authors">Obed Nyangena, Nancy Wairimu</p>
+      <img class="article-image" src="images/Icon/article.png" alt="Drought Article Image" />
+      <p class="article-description">
+        This chapter explores the interaction between gender roles, climate change, and decentralized governance in Kenya.
+        It translates institutional reflections into a published framework for resilience-building.
+      </p>
+    </article>
+
+    <!-- Article 7 -->
+    <article class="article-card">
+      <h3 class="article-title">
+        Digital Fragility, Assorted Risks and Terrorism Confluence
+        <span class="citation-count">(cited: 20 times)</span>
+      </h3>
+      <p class="article-authors">Obed Nyangena & Mavia Imbali</p>
+      <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Terrorism.jpg">
+        <source src="images/Icon/Terrorism.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p class="article-description">
+        This article provides a discursive relationship between digital leakages and gains as economies, individuals and groups jockey to advance their objectives.
+        Data protection and privacy frameworks reveal inadequacy in catching up with new technological improvements as risks soar.
+      </p>
+    </article>
+
   </main>
 
   <footer>
-    <div>
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:obednyangena@outlook.com">obednyangena@outlook.com</a></p>
-      <p>Phone: <a href="tel:+254700349788">+254 712 345 678</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/obed-nyangena" target="_blank" rel="noopener noreferrer">Obed Nyangena</a></p>
-    </div>
-    <small>© 2025 Obed Nyangena. All rights reserved.</small>
+    <p>&copy; 2025 Obed Nyangena. All rights reserved.</p>
   </footer>
 </body>
 </html>
