@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Obed Nyangena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
+
+    header {
+      background-color: #111827;
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    main {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2.page-title {
+      color: #1d3557;
+      font-weight: 800;
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 960px) {
+      .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .article-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .article-title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #1d3557;
+      margin-bottom: 0.25rem;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .citation-count {
+      color: red;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    .article-authors {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #555555;
+      margin-bottom: 1rem;
+      font-style: italic;
+      flex-shrink: 0;
+    }
+
+    .article-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    .article-description {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #333333;
+      flex-grow: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #0f1e33;
+      color: white;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: #aadfff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Obed Nyangena</h1>
+    <nav>
+      <a href="index43.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#">Toolset</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="page-title">Selected projects</h2>
+
+    <div class="articles-grid">
+
+      <article class="article-card">
+        <h3 class="article-title">
+          Digital Fragility, Assorted Risks and Terrorism Confluence
+          <span class="citation-count">(cited: 20 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena, Susan Mwangemi, John Doe</p>
+        <img class="article-image" src="images/Icon/article.png" alt="Digital Fragility Article Image" />
+        <p class="article-description">
+          We explore a digitally connected world and the tension between increased data demand and growing concerns over data protection and privacy.
+          This paper discusses digital data value chains and their implications amidst global espionage.
+          We argue for updated legislation to contain malicious data acquisition and curb criminal activity.
+        </p>
+      </article>
+
+      <article class="article-card">
+        <h3 class="article-title">
+          Association of Demographic and Occupational Factors with SARS-CoV-2 Vaccine Uptake in Kenya
+          <span class="citation-count">(cited: 18 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena, Alice Kamau, Peter Otieno</p>
+        <img class="article-image" src="images/Icon/article.png" alt="SARS-CoV-2 Vaccine Uptake Article Image" />
+        <p class="article-description">
+          This research examines initial governmental measures to curb COVID-19 spread in Kenya using demographic and occupational lenses.
+          It reveals disparities in vaccine uptake and offers metricized recommendations.
+          Cited by multiple studies, it highlights critical insights into public health policy.
+        </p>
+      </article>
+
+      <article class="article-card">
+        <h3 class="article-title">
+          Climate Change-Urbanization Nexus: Exploring the Contribution of Urbanization on Carbon Emissions in East Africa
+          <span class="citation-count">(cited: 25 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena, Michael Mwangi</p>
+        <img class="article-image" src="images/Icon/article.png" alt="Climate Change Urbanization Article Image" />
+        <p class="article-description">
+          Using panel data and advanced econometric models, we find urbanization and economic growth as key contributors to carbon emissions in East Africa,
+          challenging narratives of Africa’s passive role in climate change.
+          Recommendations call for modernization in economic planning.
+        </p>
+      </article>
+
+      <article class="article-card">
+        <h3 class="article-title">
+          Linking Weather Variability and Economic Growth in the East African Region: A Semi-Parametric Smooth Coefficient Approach
+          <span class="citation-count">(cited: 15 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena, Grace Wanjiku</p>
+        <img class="article-image" src="images/Icon/article.png" alt="Weather Variability and Economic Growth Article Image" />
+        <p class="article-description">
+          This paper finds a strong link between weather patterns and economic growth in East Africa using semi-parametric modeling.
+          It advocates for sustainable policy adoption to mitigate economic impacts of weather variability.
+        </p>
+      </article>
+
+      <article class="article-card">
+        <h3 class="article-title">
+          Linking Climate Change, Pollinators and Cereal Yields in Kenya
+          <span class="citation-count">(cited: 10 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena, Lydia Kamau, David Mutua</p>
+        <img class="article-image" src="images/Icon/article.png" alt="Climate Change Pollinators Article Image" />
+        <p class="article-description">
+          Our study links climate shifts, pollinators, and cereal yields using long-term data.
+          Findings emphasize the crucial role of pollinators in food security and the impact of climate on cereal production.
+          Recommends granular data modeling for future studies.
+        </p>
+      </article>
+
+      <article class="article-card">
+        <h3 class="article-title">
+          The Impact of Weather Variability on Economic Growth in Kenya
+          <span class="citation-count">(cited: 22 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena, James Mwangi</p>
+        <img class="article-image" src="images/Icon/article.png" alt="Weather Variability Economic Growth Kenya Article Image" />
+        <p class="article-description">
+          Employing a Vector Error Correction Model, this study finds nuanced relationships between rainfall, temperature, and GDP growth in Kenya.
+          It emphasizes the importance of timely policy measures to address short-term economic implications of climate variability.
+        </p>
+      </article>
+
+      <article class="article-card">
+        <h3 class="article-title">
+          Drought and Floods: The Triad of Climate Change Adaptation, Gender and Devolution in Kenya
+          <span class="citation-count">(cited: 17 times)</span>
+        </h3>
+        <p class="article-authors">Obed Nyangena, Nancy Wairimu</p>
+        <img class="article-image" src="images/Icon/article.png" alt="Drought and Floods Climate Adaptation Article Image" />
+        <p class="article-description">
+          This chapter explores the interaction between gender roles, climate change, and decentralized governance in Kenya.
+          It translates institutional reflections into a published framework for resilience-building.
+        </p>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:obednyangena@outlook.com">obednyangena@outlook.com</a></p>
+      <p>Phone: <a href="tel:+254700349788">+254 712 345 678</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/obed-nyangena" target="_blank" rel="noopener noreferrer">Obed Nyangena</a></p>
+    </div>
+    <small>© 2025 Obed Nyangena. All rights reserved.</small>
+  </footer>
+</body>
+</html>
