@@ -65,6 +65,13 @@
       color: #333;
     }
 
+    canvas#econChart {
+      margin-top: 30px;
+      background-color: rgba(0, 0, 0, 0.03);
+      border-radius: 12px;
+      max-width: 100%;
+    }
+
     .sections {
       display: flex;
       flex-wrap: wrap;
@@ -153,6 +160,9 @@
   <section class="hero">
     <h2>In an economy shaped by data,<br />I uncover trends and patterns that matter.</h2>
     <p>Data Analyst | Policy Consultant | Visual Storyteller</p>
+
+    <!-- Animated Chart -->
+    <canvas id="econChart" width="600" height="300"></canvas>
   </section>
 
   <section class="sections">
@@ -176,5 +186,79 @@
   <footer>
     <p>&copy; 2025 Obed Nyangena | Built with love on GitHub Pages</p>
   </footer>
+
+  <!-- Chart.js + Animation Script -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const data = {
+      labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+      datasets: [
+        {
+          label: 'GDP Growth (%)',
+          data: [2.3, 2.6, 2.9, 2.3, -3.5, 5.7, 2.1],
+          borderColor: 'rgba(75, 192, 192, 1)',
+          tension: 0.4,
+          fill: false,
+          pointRadius: 4,
+          pointHoverRadius: 6
+        },
+        {
+          label: 'Unemployment Rate (%)',
+          data: [4.9, 4.4, 3.9, 3.7, 8.1, 5.3, 3.6],
+          borderColor: 'rgba(255, 99, 132, 1)',
+          tension: 0.4,
+          fill: false,
+          pointRadius: 4,
+          pointHoverRadius: 6
+        }
+      ]
+    };
+
+    const options = {
+      responsive: true,
+      animation: {
+        duration: 2000,
+        easing: 'easeInOutQuart'
+      },
+      plugins: {
+        legend: {
+          labels: {
+            color: '#1a1a1a',
+            font: {
+              size: 14
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: '#1a1a1a' },
+          grid: { color: 'rgba(0,0,0,0.05)' }
+        },
+        y: {
+          ticks: { color: '#1a1a1a' },
+          grid: { color: 'rgba(0,0,0,0.05)' }
+        }
+      }
+    };
+
+    const chartCanvas = document.getElementById('econChart');
+    let chartInitialized = false;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !chartInitialized) {
+          new Chart(chartCanvas.getContext('2d'), {
+            type: 'line',
+            data: data,
+            options: options
+          });
+          chartInitialized = true;
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(chartCanvas);
+  </script>
 </body>
 </html>
