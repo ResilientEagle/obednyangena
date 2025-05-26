@@ -1,15 +1,12 @@
-<!DOCTYPE html>
+</body> in which code number?: <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Obed Nyangena | Data Analyst</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -17,7 +14,7 @@
 
     body {
       margin: 0;
-      font-family: "Inter", sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #ffffff;
       color: #1a1a1a;
       line-height: 1.6;
@@ -66,19 +63,6 @@
     .hero p {
       font-size: 1.2rem;
       color: #333;
-    }
-
-    /* Adjusted canvas size: 40% smaller than original 600x300 */
-    canvas#econChart {
-      margin-top: 30px;
-      background-color: #000000; /* black background */
-      border-radius: 12px;
-      max-width: 100%;
-      width: 360px; /* 600 * 0.2 */
-      height: 180px; /* 300 * 0.2 */
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .sections {
@@ -150,11 +134,6 @@
       .card {
         max-width: 100%;
       }
-
-      canvas#econChart {
-        width: 100% !important;
-        height: auto !important;
-      }
     }
   </style>
 </head>
@@ -171,40 +150,28 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>
-      In an economy shaped by data,<br />
-      I uncover trends and patterns that matter.
-    </h2>
-    <p>Data Analyst | Policy Consultant | Visual Storyteller</p>
+<section class="hero">
+  <h2>In an economy shaped by data,<br />I uncover trends and patterns that matter.</h2>
+  <p>Data Analyst | Policy Consultant | Visual Storyteller</p>
 
-    <!-- Animated Chart -->
-    <canvas id="econChart" width="360" height="180"></canvas>
-  </section>
+  <!-- Chart Canvas -->
+  <canvas id="econChart" width="600" height="300"></canvas>
+</section>
 
   <section class="sections">
     <div class="card">
       <h3>Consulting</h3>
-      <p>
-        I offer data-driven economic and policy consulting for
-        organizations, government entities, and nonprofits.
-      </p>
+      <p>I offer data-driven economic and policy consulting for organizations, government entities, and nonprofits.</p>
       <a href="#" class="btn">Request Consulting</a>
     </div>
     <div class="card">
       <h3>Speaking</h3>
-      <p>
-        I simplify complex topics for live audiences, from conference
-        panels to guest lectures and online sessions.
-      </p>
+      <p>I simplify complex topics for live audiences, from conference panels to guest lectures and online sessions.</p>
       <a href="#" class="btn">Book Speaking</a>
     </div>
     <div class="card">
       <h3>Collaborations</h3>
-      <p>
-        I'm open to impactful research and policy work with analysts,
-        economists, and institutions globally.
-      </p>
+      <p>I'm open to impactful research and policy work with analysts, economists, and institutions globally.</p>
       <a href="#" class="btn">Propose Collaboration</a>
     </div>
   </section>
@@ -212,83 +179,5 @@
   <footer>
     <p>&copy; 2025 Obed Nyangena | Built with love on GitHub Pages</p>
   </footer>
-
-  <!-- Chart.js + Animation Script -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    const data = {
-      labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
-      datasets: [
-        {
-          label: "GDP Growth (%)",
-          data: [2.3, 2.6, 2.9, 2.3, -3.5, 5.7, 2.1],
-          borderColor: "red",
-          backgroundColor: "red", // Fill legend box with red
-          tension: 0.4,
-          fill: false,
-          pointRadius: 4,
-          pointHoverRadius: 6,
-        },
-        {
-          label: "Unemployment Rate (%)",
-          data: [4.9, 4.4, 3.9, 3.7, 8.1, 5.3, 3.6],
-          borderColor: "green",
-          backgroundColor: "green", // Fill legend box with green
-          tension: 0.4,
-          fill: false,
-          pointRadius: 4,
-          pointHoverRadius: 6,
-        },
-      ],
-    };
-
-    const options = {
-      responsive: true,
-      animation: {
-        duration: 2000,
-        easing: "easeInOutQuart",
-      },
-      plugins: {
-        legend: {
-          labels: {
-            color: "#ffffff", // White legend text on black bg
-            boxWidth: 20,     // Width of the legend color box
-            padding: 15,
-          },
-        },
-      },
-      scales: {
-        x: {
-          ticks: { color: "#ffffff" }, // White x-axis labels
-          grid: { color: "rgba(255,255,255,0.1)" }, // Subtle white grid lines
-        },
-        y: {
-          ticks: { color: "#ffffff" }, // White y-axis labels
-          grid: { color: "rgba(255,255,255,0.1)" }, // Subtle white grid lines
-        },
-      },
-    };
-
-    const chartCanvas = document.getElementById("econChart");
-    let chartInitialized = false;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !chartInitialized) {
-            new Chart(chartCanvas.getContext("2d"), {
-              type: "line",
-              data: data,
-              options: options,
-            });
-            chartInitialized = true;
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(chartCanvas);
-  </script>
 </body>
 </html>
