@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +19,8 @@
     </script>
     <!---font awesome cdn for font icons---->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Add icon library for specific tech icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <style>
         :root {
             --purple: #f3f2ef;
@@ -98,449 +99,121 @@
             padding-top: 70px; /* Added to account for fixed nav */
         }
 
-        .profile-card {
-            background: #016064;
-            width: 450px;
-            padding: 3rem;
-            border-radius: 5px;
-            min-height: 500px;
-            position: relative;
-            color: #fff;
-            margin: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: column;
-        }
+        /* ... (keep your existing profile-card, about, and other styles) ... */
 
-        .profile-card .profile-pic {
-            margin-top: 10px;
-            overflow: hidden;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid #fff;
-        }
-
-        .profile-card .profile-pic img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .profile-card .profile-details {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-        }
-
-        .profile-details .intro {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .profile-details .intro h2 {
-            margin-top: 0.1px;
-        }
-
-        .profile-details .intro h4 {
-            background: #016064;
-            font-weight: 400;
-            border-radius: 4px;
-            padding: 5px 10px;
-            margin: 6px;
-        }
-
-        .profile-details .intro .social {
-            margin-top: 0px;
-            margin-bottom: 2px;
-        }
-
-        .profile-details .intro .social i {
-            color: #ddd;
-            font-size: 26px;
-            background-color: #016064;
-            margin: 3px;
-            height: 1px;
-            width: 15px;
-            line-height: 5px;
-            text-align: center;
-            border-radius: 3px;
-            transition: 0.5s;
-        }
-
-        .profile-details .intro .social i:hover {
-            transform: scale(1.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .profile-details .contact-info {
-            background-color: #1d1d1d;
-            padding: 5px;
-            border-radius: 10px;
-            width: 100%;
-            margin-top: 2rem;
-        }
-
-        .profile-details .contact-info .row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 2px 0;
-            margin-bottom: 2px;
-        }
-
-        .contact-info .row .icon {
-            height: 20px;
-            width: 40px;
-            line-height: 5px;
-            border-radius: 5px;
-            background-color: #016064;
-            text-align: center;
-            color: #fff;
-            transition: 0.5s;
-        }
-
-        .row .icon:hover {
-            transform: scale(1.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .row .content {
-            min-width: 70%;
-        }
-
-        .row .content span {
-            font-size: 12px;
-        }
-
-        .download-btn {
-            background: linear-gradient(45deg, #f64c57, #e21b5a);
-            color: #fff;
-            padding: 1rem 3rem;
-            border-radius: 30px;
-            margin-top: 1.5rem;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .download-btn:hover {
-            transform: scale(1.05);
-        }
-
-        /***** about section ****/
-        .about {
-            background-color:#016064;
-            max-width: 800px;
-            padding: 3rem 3rem;
-            border-radius: 10px;
-            margin-top: 2rem;
-        }
-
-        .about h1 {
-            color: #f2f2f2;
-            margin-bottom: 1.1rem;
-            position: relative;
-            display: inline-block;
-            font-size: 3.5rem;
-        }
-
-        .about h1::after {
-            position: absolute;
-            content: "";
-            top: 50%;
-            right: -50%;
-            width: 45%;
-            height: 2px;
-            background: linear-gradient(45deg, #f64c57, #e21b5a);
-        }
-
-        .about h2 {
-            color: #f2f2f2;
-            font-size: 2rem;
-            margin: 0.5rem 0;
-        }
-
-        .about p {
-            color: #555;
-            margin: 1.5rem 0;
-        }
-
-        .about .work {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-        }
-
-        .work .workbox {
-            display: flex;
-            justify-content: space-between;
-            border-radius: 8px;
-            border: 1px solid #333;
-            padding: 1rem;
-            margin: 1rem;
-            transition: transform 0.3s;
-        }
-
-        .work .workbox:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .work .workbox .desc {
-            width: 75%;
-            color: #555;
-        }
-
-        .work .workbox .desc h3 {
-            color: #f2f2f2;
-            margin-bottom: 3px;
-        }
-
-        .work .workbox .desc p {
-            margin: 0px;
-        }
-        /*** Toolset section ***/
+        /*** Enhanced Toolset section ***/
         .toolset-container {
             background-color: #016064;
-            padding: 2rem;
+            padding: 3rem;
             border-radius: 10px;
             width: 100%;
             margin-top: 2rem;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
+            text-align: center;
         }
 
         .toolset-container h2 {
-            width: 100%;
             color: #fff;
-            text-align: center;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-        }
-
-        .toolset {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #fff;
-            margin: 0.5rem 1rem;
-            animation: moveToolset 3s ease-in-out infinite;
-            width: 100px;
-        }
-
-        .toolset:nth-child(odd) {
-            animation-direction: alternate;
-        }
-
-        .toolset i {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        @keyframes moveToolset {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        /*** Portfolio section ***/
-        .portfolio {
-            background-color: #016064;
-            padding: 3rem;
-            border-radius: 10px;
-            width: 100%;
-            margin-top: 2rem;
-        }
-
-        .portfolio h2 {
-            color: #fff;
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-        }
-
-        .portfolio .projects {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .portfolio .project {
-            background-color: #f3f2ef;
-            padding: 1.5rem;
-            border-radius: 8px;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-start;
-            transition: transform 0.3s;
-        }
-
-        .portfolio .project:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .portfolio .project img {
-            width: 100%;
-            max-width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-top: 1rem;
-            border: 1px solid #ddd;
-        }
-
-        .portfolio .project h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #111;
-        }
-
-        .portfolio .project p {
-            color: #666;
-            margin: 10px 0;
-            font-size: 0.9rem;
-        }
-
-        .portfolio .project a {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
             display: inline-block;
-            margin-top: 10px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s;
         }
 
-        .portfolio .project a:hover {
-            color: #e21b5a;
+        .toolset-container h2::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(45deg, #f64c57, #e21b5a);
+            bottom: -10px;
+            left: 25%;
         }
 
-        /*** Contact Me section ***/
-        .contact-me {
-            background-color: #016064;
-            padding: 3rem;
-            border-radius: 10px;
-            width: 100%;
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            justify-items: center;
             margin-top: 2rem;
         }
 
-        .contact-me h2 {
-            color: #fff;
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-me .contact-details {
+        .tool-item {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width: 100%;
-        }
-
-        .contact-me .contact-details .row {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 10px 0;
-            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            padding: 1rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
             width: 100%;
+            max-width: 150px;
         }
 
-        .contact-me .contact-details .row:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
+        .tool-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .contact-me .contact-details .row .icon {
-            height: 40px;
-            width: 40px;
-            line-height: 40px;
-            border-radius: 5px;
-            background-color: #f3f2ef;
-            text-align: center;
+        .tool-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
             color: #fff;
-            transition: 0.5s;
         }
 
-        .contact-me .contact-details .row .icon i {
-            font-size: 20px;
+        .tool-icon img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
         }
 
-        .contact-me .contact-details .row .content {
-            min-width: 70%;
+        .tool-name {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
         }
 
-        .contact-me .contact-details .row .content span {
-            font-size: 12px;
+        /* Specific icon colors */
+        .python-icon {
+            color: #3776AB;
         }
 
+        .r-icon {
+            color: #276DC3;
+        }
+
+        .powerbi-icon {
+            color: #F2C811;
+        }
+
+        .stata-icon {
+            color: #195F8C;
+        }
+
+        .mssuite-icon {
+            color: #D83B01;
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .profile-card {
-                width: 100%;
-                margin: 15px 0;
-            }
-
-            .portfolio .projects {
-                grid-template-columns: 1fr;
-            }
-
-            nav ul {
-                display: none;
+            .tools-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
             }
         }
 
         @media (max-width: 576px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-
-            .profile-card {
-                width: 100%;
-                margin: 15px 0;
-                padding: 2rem;
-            }
-
-            .about {
-                padding: 2rem;
-            }
-
-            .about h1 {
+            
+            .tool-icon {
                 font-size: 2.5rem;
             }
-
-            .work {
-                grid-template-columns: 1fr;
-            }
-
-            .portfolio {
-                padding: 2rem;
+            
+            .tool-name {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -557,52 +230,62 @@
         </ul>
     </nav>
     <div class="container">
-        <div class="profile-card"> 
-            <div class="profile-pic">
-                <!-- Placeholder professional woman image -->
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Abigael Cherotich - Data Analyst">
-            </div>
-
-            <div class="profile-details">
-                <div class="intro">
-                    <h1>Abigael Cherotich</h1>
-                    <h1 style="color: #D6D2C8;">Data Analyst</h1>
+        <!-- Your existing profile-card and about sections here -->
+        
+        <!-- Enhanced Toolset Section -->
+        <div id="toolset" class="toolset-container">
+            <h2>My Data Analytics Toolset</h2>
+            <div class="tools-grid">
+                <!-- Stata -->
+                <div class="tool-item">
+                    <div class="tool-icon stata-icon">
+                        <!-- Using a generic database icon for Stata as there isn't a specific one in Font Awesome -->
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <span class="tool-name">Stata</span>
                 </div>
-                <div class="contact-info">
-                    <div class="row">
-                        <div class="icon">
-                            <i class="fa fa-phone" style="color:var(--dark-magenta)"></i>
-                        </div>
-                        <div class="content">
-                            <span>Mobile</span>
-                            <h5>+254 704 990 012</h5>
-                        </div>
+                
+                <!-- R Studio -->
+                <div class="tool-item">
+                    <div class="tool-icon r-icon">
+                        <!-- Using the R icon from Devicon -->
+                        <i class="devicon-r-plain"></i>
                     </div>
-
-                    <div class="row">
-                        <div class="icon">
-                            <i class="fa fa-envelope-open" style="color:var(--light-green)"></i>
-                        </div>
-                        <div class="content">
-                            <a  style="color: #D6D2C8;" href="mailto:abigaelcherotich867@gmail.com"> abigaelcherotich867@gmail.com</a>
-                        </div>
+                    <span class="tool-name">R Studio</span>
+                </div>
+                
+                <!-- Python -->
+                <div class="tool-item">
+                    <div class="tool-icon python-icon">
+                        <!-- Using the Python icon from Devicon -->
+                        <i class="devicon-python-plain"></i>
                     </div>
-
-                    <div class="row">
-                        <div class="icon">
-                            <i class="fab fa-linkedin" style="color:var(--light-green)"></i>
-                        </div>
-                        <div class="content">
-                            <a style="color: #D6D2C8;" href="https://www.linkedin.com/in/abigael-cherotich/" target="_blank"> LinkedIn</a>
-                        </div>
+                    <span class="tool-name">Python</span>
+                </div>
+                
+                <!-- Power BI -->
+                <div class="tool-item">
+                    <div class="tool-icon powerbi-icon">
+                        <!-- Using a custom Power BI icon (Font Awesome doesn't have one) -->
+                        <i class="fas fa-chart-line"></i>
                     </div>
-
-                    <div class="row">
-                        <div class="icon">
-                            <i class="fa fa-map-marker" style="color:var(--light-purple)"></i>
-                        </div>
-                        <div class="content">
-                            <span>Location</span>
-                            <h5>Nairobi Kenya</h5>
-                        </div>
+                    <span class="tool-name">Power BI</span>
+                </div>
+                
+                <!-- MS Suite -->
+                <div class="tool-item">
+                    <div class="tool-icon mssuite-icon">
+                        <!-- Using Office icon for MS Suite -->
+                        <i class="fas fa-file-excel"></i>
                     </div>
+                    <span class="tool-name">MS Office Suite</span>
+                </div>
+                
+                <!-- Additional tools can be added here following the same pattern -->
+            </div>
+        </div>
+        
+        <!-- Your existing portfolio and contact sections here -->
+    </div>
+</body>
+</html>
