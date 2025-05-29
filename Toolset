@@ -1,1 +1,759 @@
 
+None selected
+
+Skip to content
+Using Gmail with screen readers
+Conversations
+Unread
+ 
+1–50 of 269
+ 
+Everything else
+ 
+1–50 of 3,003
+ 
+	
+	
+	
+	
+Abigael Cherotich
+	
+html
+-- Best Regards, Abigael Cherotich, Research and Data Analyst. My Portfolio
+	
+	19:59
+	
+html
+Abigael Cherotich
+	
+Attachments19:59 (2 minutes ago)
+	
+to me, Obed
+
+
+-- 
+Best Regards,
+
+Abigael Cherotich,
+Research and Data Analyst.
+My Portfolio
+One attachment  • Scanned by Gmail
+	
+Hi, I got it.
+Thanks a lot.
+Well received with thanks.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abigael Portfolio Website</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Abigael – Data analyst specializing in Power BI, Tableau, and Looker dashboards. Explore analytics projects and data storytelling.">
+    <meta name="keywords" content="Data Analyst, Power BI, Tableau, Looker, Data Visualization, Analytics Portfolio, Dashboard Developer, Business Intelligence">
+    <meta name="author" content="Abigael">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZ6VHWHYR5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LZ6VHWHYR5');
+    </script>
+    <!---font awesome cdn for font icons---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        :root {
+            --purple: #f3f2ef;
+            --purple-light: #f3f2ef;
+            --dark-blue: #012677;
+            --blue: #5c65c0;
+            --skyblue: #00b4fc;
+            --light-blue: #005bc5;
+            --dark-pink: #f64c57;
+            --dark-magenta: #e21b5a;
+            --light-green: #61e2c2;
+            --light-purple: #d9abff;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            font-family: Poppins, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #f3f2ef, var(--purple), var(--purple-light));
+
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Added to make the nav sticky */
+            width: 100%; /* Ensure it spans the full width */
+            top: 0; /* Position it at the top */
+            z-index: 1000; /* Make sure it appears above other content */
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #000;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--blue);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .profile-card {
+            background: #016064;
+            width: 450px;
+            padding: 3rem;
+            border-radius: 5px;
+            min-height: 500px;
+            position: relative;
+            color: #fff;
+            margin: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .profile-card .profile-pic {
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .profile-card .profile-pic img {
+            border-radius: 5px;
+        }
+
+        .profile-card .profile-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+        }
+
+        .profile-details .intro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .profile-details .intro h2 {
+            margin-top: 0.1px;
+        }
+
+        .profile-details .intro h4 {
+            background: #016064;
+            font-weight: 400;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin: 6px;
+        }
+
+        .profile-details .intro .social {
+            margin-top: 0px;
+            margin-bottom: 2px;
+        }
+
+        .profile-details .intro .social i {
+            color: #ddd;
+            font-size: 26px;
+            background-color: #016064;
+            margin: 3px;
+            height: 1px;
+            width: 15px;
+            line-height: 5px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 0.5s;
+        }
+
+        .profile-details .intro .social i:hover {
+            transform: scale(1.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .profile-details .contact-info {
+            background-color: #1d1d1d;
+            padding: 5px;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .profile-details .contact-info .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2px 0;
+            margin-bottom: 2px;
+        }
+
+        .contact-info .row .icon {
+            height: 20px;
+            width: 40px;
+            line-height: 5px;
+            border-radius: 5px;
+            background-color: #016064;
+            text-align: center;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .row .icon:hover {
+            transform: scale(1.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .row .content {
+            min-width: 70%;
+        }
+
+        .row .content span {
+            font-size: 12px;
+        }
+
+        .download-btn {
+            background: linear-gradient(45deg, #f64c57, #e21b5a);
+            color: #fff;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            margin-top: 1.5rem;
+            border: none;
+        }
+
+        /***** about section ****/
+        .about {
+            background-color:#016064;
+            max-width: 800px;
+            padding: 3rem 3rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .about h1 {
+            color: #f2f2f2;
+            margin-bottom: 1.1rem;
+            position: relative;
+            display: inline-block;
+            font-size: 3.5rem;
+        }
+
+        .about h1::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: -50%;
+            width: 45%;
+            height: 2px;
+            background: linear-gradient(45deg, #f64c57, #e21b5a);
+        }
+
+        .about h2 {
+            color: #f2f2f2;
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+
+        .about p {
+            color: #555;
+            margin: 1.5rem 0;
+        }
+
+        .about .work {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+
+        .work .workbox {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 8px;
+            border: 1px solid #333;
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        .work .workbox .desc {
+            width: 75%;
+            color: #555;
+        }
+
+        .work .workbox .desc h3 {
+            color: #f2f2f2;
+            margin-bottom: 3px;
+        }
+
+        .work .workbox .desc p {
+            margin: 0px;
+        }
+        /*** Toolset section ***/
+        .toolset-container {
+            background-color: #016064;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .toolset-container h2 {
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .toolset {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            margin: 0.5rem 1rem;
+            animation: moveToolset 3s ease-in-out infinite;
+        }
+
+        .toolset:nth-child(odd) {
+            animation-direction: alternate;
+        }
+
+        .toolset i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes moveToolset {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /*** Portfolio section ***/
+        .portfolio {
+            background-color: #016064;
+            padding: 3rem;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .portfolio h2 {
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .portfolio .project {
+            background-color: #f3f2ef;
+            padding: 1.5rem;
+            border-radius: 8px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .portfolio .project img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .portfolio .project h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio .project p {
+            color: #999;
+        }
+
+        /*** Contact Me section ***/
+        .contact-me {
+            background-color: #016064;
+            padding: 3rem;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .contact-me h2 {
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-me .contact-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .contact-me .contact-details .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+
+        .contact-me .contact-details .row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .contact-me .contact-details .row .icon {
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            border-radius: 5px;
+            background-color: #f3f2ef;
+            text-align: center;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .contact-me .contact-details .row .icon i {
+            font-size: 20px;
+        }
+
+        .contact-me .contact-details .row .content {
+            min-width: 70%;
+        }
+
+        .contact-me .contact-details .row .content span {
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-card {
+                width: 100%;
+                margin: 15px 0;
+            }
+
+            .portfolio .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .profile-card {
+                width: 100%;
+                margin: 15px 0;
+            }
+
+            .portfolio {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+        <h1>Abigael Cherotich </h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#toolset">Toolset</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="profile-card"> 
+            <div class="profile-pic">
+                <img src="images/about/may7.jpg" alt="user avatar">
+            </div>
+
+            <div class="profile-details">
+                <div class="intro">
+                    <h1>Abigael Cherotich</h1>
+                    <h1 style="color: #D6D2C8;">Data Analyst</h1>
+                </div>
+                <div class="contact-info">
+                    <div class="row">
+                        <div class="icon">
+                            <i class="fa fa-phone" style="color:var(--dark-magenta)"></i>
+                        </div>
+                        <div class="content">
+                            <span>Mobile</span>
+                            <h5>+254 704 990 012</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="icon">
+                            <i class="fa fa-envelope-open" style="color:var(--light-green)"></i>
+                        </div>
+                        <div class="content">
+                            <a  style="color: #D6D2C8;" href="mailto:abigaelcherotich867@gmail.com"> abigaelcherotich867@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="icon">
+                            <i class="fab fa-linkedin" style="color:var(--light-green)"></i>
+                        </div>
+                        <div class="content">
+                            <a style="color: #D6D2C8;" href="https://www.linkedin.com/in/abigael-cherotich/" target="_blank"> LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="icon">
+                            <i class="fa fa-map-marker" style="color:var(--light-purple)"></i>
+                        </div>
+                        <div class="content">
+                            <span>Location</span>
+                            <h5>Nairobi Kenya</h5>
+                        </div>
+                    </div>
+               
+             </div>
+                <button class="download-btn"> <i class="fa fa-download"></i> <a href="images/about/Abigael Cherotich_CV-230525.pdf" target="_blank" > Download CV</button> </a>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="about">
+            <h1 style="color: #D6D2C8;">About Me</h1>
+            <p style="color: #ffff;"> <strong>Welcome to my portfolio website! </strong></p>
+            <p style="color: #ffff;">I’m a <strong>Data Analyst</strong> passionate about transforming complex data into clear insights and compelling visuals. I love uncovering patterns that drive smarter decisions."</p>
+            <p style="color: #ffff;">With a bachelor’s degree in <strong>Economics and Statistics</strong> and <strong>five years of experience</strong> in market and social research, I specialize in data visualization, statistical analysis, and translating raw data into actionable strategies.</p>
+            <p style="color: #ffff;">Explore my projects, and feel free to reach out for collaborations or inquiries! 🚀</p>
+            <h2 style="color: #D6D2C8;">Areas of interest</h2>
+            <div class="work">
+                <div class="workbox">
+                    <div class="desc">
+                        <h4 style="color: #ffff;">Dashboard Development</h4>
+                        <p style="color: #D6D2C8;">Using Tools: Looker,PowerBi, Tableau, Excel and R.</p>
+                    </div>
+                </div>
+               
+                <div class="workbox">
+                    <div class="desc">
+                        <h4 style="color: #ffff;">Customer Segmentation</h4>
+                        <p style="color: #D6D2C8;"> Using Tools: R and Python.</p>
+                    </div>
+                </div>
+
+                <div class="workbox">
+                    <div class="desc">
+                        <h3>Data Anaysis</h3>
+                        <p style="color: #D6D2C8;">Using Tools: SPSS,Stata,Python Excel and R</p>
+                    </div>
+                </div>
+                <div class="workbox">
+                    <div class="desc">
+                        <h3>Model Development</h3>
+                        <p style="color: #D6D2C8;"> Using Tools: R and Python.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toolset Section -->
+        <div id="toolset" class="toolset-container">
+            <h2 style="color: #D6D2C8;"><strong> My Tool Set</strong></h2>
+            <div class="toolset">
+                <i class="fas fa-database"></i>
+                <span>SQL</span>
+            </div>
+            <div class="toolset">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+            </div>
+            <div class="toolset">
+                <i class="fab fa-r-project"></i>
+                <span>R</span>
+            </div>
+            <div class="toolset">
+                <i class="fas fa-file-excel"></i>
+                <span>Excel</span>
+            </div>
+            <div class="toolset">
+                <i class="fas fa-chart-bar"></i>
+                <span>SPSS</span>
+            </div>
+            <div class="toolset">
+                <i class="fas fa-database"></i>
+                <span>STATA</span>
+            </div>
+            <div class="toolset">
+                <i class="fas fa-chart-line"></i>
+                <span>Power BI</span>
+            </div>
+            <div class="toolset">
+                <i class="fas fa-chart-pie"></i>
+                <span>Tableau</span>
+            </div>
+            <div class="toolset">
+                <i class="fas fa-book"></i>
+                <span>Googlesheets</span>
+            </div>
+            <div class="toolset">
+                <i class="fas fa-server"></i>
+                <span>Looker</span>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div id="portfolio" class="portfolio">
+            <h2>Portfolio Brief</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3 style="color: #111;">Customer segmentation & Clustering</h3>
+                    <img src="images/projects/clustering.png" alt="Project 1 Image">
+                    <p style="color: #111;">Implemented K-means clustering methodology to partition the customer base of mall clients according to demographic variables including age, gender, income, and expenditure patterns. Employed segmentation strategies to tailor marketing initiatives and mall amenities for enhanced customer satisfaction and accelerated business expansion, aligning services with the distinctive preferences and behaviors of each identified segment.</p>
+                    <a style="color: #FF0066;" href="images/projects/Python Customer segmentation(Clustering).pdf" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3 style="color: #111;">Customer Churn Prediction</h3>
+                    <img src="images/projects/Analytics background.png" alt="Project 2 Image">
+                    <p style="color: #111;">The ability to predict when a customer is at a high risk of churning is valuable for every business with returning customers. Churn is defined as the number of customers cancelling within a time period divided by the number of active customers at the start of that period. In order to apply a modeling technique to predict churn, we need to understand the customer behavior and characteristics which signal the risk of customers churn. In this example, I will look into an electricity company. An electricity company is a good example because customers ‘return’ every month.</p>
+                    <a style="color: #FF0066;" href="images/projects/DATA ANALYTICS-Document.pdf" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3 style="color: #111;">Sales Funnel Analysis</h3>
+                    <img src="images/projects/Data Analysis Background.png" alt="Project 3 Image">
+                    <p style="color: #111;">For a webshop I have done an extensive analysis to optimize the sales funnel. The webshop wanted to know when people drop out during the ordering process and whether a distinction could be made between different types of customers. When the sales funnel is optimized according to the (summary) analysis below, turnover can potentially increase by 5.8%. The figures below have been adjusted because of anonymity of the webshop.</p>
+                    <a style="color: #FF0066;" href="images/projects/Data AnalysisV1.docx" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3 style="color: #111;">Ads performance dashboard</h3>
+                    <img src="images/projects/ads dashboard.png" alt="Project 4 Image">
+                    <p style="color: #111;">This interactive Looker Studio dashboard presents key performance metrics from various advertising platforms (e.g., Google Ads, Facebook, Instagram). It displays KPIs like Impressions, Clicks, Conversions, Spend, Revenue, and efficiency metrics (CTR, CPC, CPA, ROAS, CPM, Conversion Rate). With time series charts and comparison indicators, it enables marketing teams and ad managers to track trends and make data-driven decisions quickly.</p>
+                    <a style="color: #FF0066;" href="https://lookerstudio.google.com/s/iCFVRKLUIcU" target="_blank">View dashboard</a>
+                </div>
+                <div class="project">
+                    <h3 style="color: #111;">Supermarket sales perfomance Dashboard</h3>
+                    <img src="images/projects/salesdashboard.png" alt="Project 5 Image">
+                    <p style="color: #111;">Explore real-time insights and track financial health with Revenue Performance Dashboard. Monitor key metrics, analyze trends, and make informed decisions swiftly. Gain clarity into sales performance, revenue growth, and profitability, empowering your team to drive strategic initiatives with precision and agility.</p>
+                    <a style="color: #FF0066;" href="https://lookerstudio.google.com/s/s_cxUXllOto" target="_blank">View dashboard</a>
+                </div>
+                <div class="project">
+                    <h3 style="color: #111;">Revenue perfomance Dashboard</h3>
+                    <img src="images/projects/Monthly Revenue perfomance dashboard.png" alt="Project 6 Image">
+                    <p style="color: #111;">Explore real-time insights and track financial health with Revenue Performance Dashboard. Monitor key metrics, analyze trends, and make informed decisions swiftly. Gain clarity into sales performance, revenue growth, and profitability, empowering your team to drive strategic initiatives with precision and agility.</p>
+                    <a style="color: #FF0066;" href="images/projects/Dashboard-documentv3.docx" target="_blank">View dashboard</a>
+                </div>
+             </div>
+        </div>
+
+        <!-- Contact Me Section -->
+        <div id="contact" class="contact-me">
+            <h2>Contact Me</h2>
+            <div class="contact-details">
+                <div class="row">
+                    <div class="icon">
+                        <i class="fa fa-phone" style="color:var(--dark-magenta)"></i>
+                    </div>
+                    <div class="content">
+                       <h5 style="color: #ffff;">+254 704 990 012</h5>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="icon">
+                        <i class="fa fa-envelope-open" style="color:var(--light-green)"></i>
+                    </div>
+                    <div class="content">
+                        <a  style="color: #ffff;" href="mailto:abigaelcherotich867@gmail.com" target="_blank"> abigaelcherotich867@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="icon">
+                        <i class="fab fa-linkedin" style="color:var(--light-blue)"></i>
+                    </div>
+                    <div class="content">
+                        <a style="color: #D6D2C8;" href="https://www.linkedin.com/in/abigael-cherotich/" target="_blank"> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+index41 (2).html
+Displaying index41 (2).html.
