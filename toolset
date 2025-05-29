@@ -347,22 +347,17 @@
 </head>
 <body>
     <!-- Header/Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Abigael Cherotich</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
-
+  <header>
+    <h1>Obed Nyangena</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="toolset.html">Toolset</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -387,7 +382,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Toolset -->
     <section id="skills" class="skills">
         <div class="skills-container">
             <h2 class="section-title">My Skills</h2>
@@ -475,49 +470,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Let's Connect</h3>
-                <p>I'm currently available for freelance work or full-time positions. If you have a project you want to get started or think you need my help with something, then get in touch.</p>
-                <p><i class="fas fa-envelope"></i> abigaelcherotich867@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +254 704 990 012</p>
-                <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
-            </div>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-medium"></i></a>
-        </div>
-        <p>&copy; 2025 Abigael Cherotich. All rights reserved.</p>
-    </footer>
-
-    <script>
+   <script>
         // Mobile navigation toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
