@@ -2,290 +2,522 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abigael Portfolio Website</title>
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Abigael – Data analyst specializing in Power BI, Tableau, and Looker dashboards. Explore analytics projects and data storytelling.">
-    <meta name="keywords" content="Data Analyst, Power BI, Tableau, Looker, Data Visualization, Analytics Portfolio, Dashboard Developer, Business Intelligence">
-    <meta name="author" content="Abigael">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZ6VHWHYR5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-LZ6VHWHYR5');
-    </script>
-    <!---font awesome cdn for font icons---->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <!-- Add icon library for specific tech icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <title>Abigael Cherotich - Data Analyst Portfolio</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --purple: #f3f2ef;
-            --purple-light: #f3f2ef;
+            --primary-color: #016064;
+            --secondary-color: #f3f2ef;
+            --accent-color: #f64c57;
+            --text-color: #333;
+            --light-text: #fff;
             --dark-blue: #012677;
-            --blue: #5c65c0;
-            --skyblue: #00b4fc;
-            --light-blue: #005bc5;
-            --dark-pink: #f64c57;
-            --dark-magenta: #e21b5a;
-            --light-green: #61e2c2;
-            --light-purple: #d9abff;
         }
 
         * {
-            box-sizing: border-box;
-            padding: 0;
             margin: 0;
-            text-decoration: none;
-            font-family: Poppins, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background: linear-gradient(45deg, #f3f2ef, var(--purple), var(--purple-light));
-            margin: 0;
-            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #ffffff;
-            padding: 1rem 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Header/Navigation */
+        header {
+            background-color: var(--light-text);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
 
-        nav h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: #000;
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        nav ul {
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
             display: flex;
             list-style: none;
         }
 
-        nav ul li {
-            margin: 0 1rem;
+        .nav-links li {
+            margin-left: 2rem;
         }
 
-        nav ul li a {
-            color: #000;
+        .nav-links a {
             text-decoration: none;
-            font-size: 1rem;
+            color: var(--text-color);
+            font-weight: 500;
             transition: color 0.3s;
         }
 
-        nav ul li a:hover {
-            color: var(--blue);
+        .nav-links a:hover {
+            color: var(--accent-color);
         }
 
-        .container {
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
             display: flex;
-            justify-content: space-around;
             align-items: center;
-            min-height: 100vh;
-            width: 100%;
-            flex-wrap: wrap;
-            position: relative;
-            padding-top: 70px; /* Added to account for fixed nav */
-        }
-
-        /* ... (keep your existing profile-card, about, and other styles) ... */
-
-        /*** Enhanced Toolset section ***/
-        .toolset-container {
-            background-color: #016064;
-            padding: 3rem;
-            border-radius: 10px;
-            width: 100%;
-            margin-top: 2rem;
+            padding: 0 2rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80') no-repeat center center/cover;
+            color: var(--light-text);
             text-align: center;
         }
 
-        .toolset-container h2 {
-            color: #fff;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            position: relative;
-            display: inline-block;
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .toolset-container h2::after {
-            content: "";
-            position: absolute;
-            width: 50%;
-            height: 3px;
-            background: linear-gradient(45deg, #f64c57, #e21b5a);
-            bottom: -10px;
-            left: 25%;
-        }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 2rem;
-            justify-items: center;
-            margin-top: 2rem;
-        }
-
-        .tool-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: all 0.3s ease;
-            padding: 1rem;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            width: 100%;
-            max-width: 150px;
-        }
-
-        .tool-item:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .tool-icon {
-            font-size: 3.5rem;
+        .hero h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
-            color: #fff;
         }
 
-        .tool-icon img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
         }
 
-        .tool-name {
-            color: #fff;
-            font-size: 1rem;
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: var(--light-text);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
             font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e21b5a;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
             text-align: center;
         }
 
-        /* Specific icon colors */
-        .python-icon {
-            color: #3776AB;
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .r-icon {
-            color: #276DC3;
+        /* Skills/Toolset Section */
+        .skills {
+            padding: 5rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--light-text);
         }
 
-        .powerbi-icon {
-            color: #F2C811;
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .stata-icon {
-            color: #195F8C;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
         }
 
-        .mssuite-icon {
-            color: #D83B01;
+        .skill-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
         }
 
-        /* Responsive adjustments */
+        .skill-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--light-text);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--light-text);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: var(--light-text);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .social-links {
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--light-text);
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .tools-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1.5rem;
+            .nav-links {
+                display: none;
             }
-        }
 
-        @media (max-width: 576px) {
-            .tools-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .hamburger {
+                display: block;
             }
-            
-            .tool-icon {
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .hero h1 {
                 font-size: 2.5rem;
-            }
-            
-            .tool-name {
-                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Abigael Cherotich</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
 
-<nav>
-        <h1>Abigael Cherotich</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#toolset">Toolset</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <!-- Your existing profile-card and about sections here -->
-        
-        <!-- Enhanced Toolset Section -->
-        <div id="toolset" class="toolset-container">
-            <h2>My Data Analytics Toolset</h2>
-            <div class="tools-grid">
-                <!-- Stata -->
-                <div class="tool-item">
-                    <div class="tool-icon stata-icon">
-                        <!-- Using a generic database icon for Stata as there isn't a specific one in Font Awesome -->
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <span class="tool-name">Stata</span>
-                </div>
-                
-                <!-- R Studio -->
-                <div class="tool-item">
-                    <div class="tool-icon r-icon">
-                        <!-- Using the R icon from Devicon -->
-                        <i class="devicon-r-plain"></i>
-                    </div>
-                    <span class="tool-name">R Studio</span>
-                </div>
-                
-                <!-- Python -->
-                <div class="tool-item">
-                    <div class="tool-icon python-icon">
-                        <!-- Using the Python icon from Devicon -->
-                        <i class="devicon-python-plain"></i>
-                    </div>
-                    <span class="tool-name">Python</span>
-                </div>
-                
-                <!-- Power BI -->
-                <div class="tool-item">
-                    <div class="tool-icon powerbi-icon">
-                        <!-- Using a custom Power BI icon (Font Awesome doesn't have one) -->
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <span class="tool-name">Power BI</span>
-                </div>
-                
-                <!-- MS Suite -->
-                <div class="tool-item">
-                    <div class="tool-icon mssuite-icon">
-                        <!-- Using Office icon for MS Suite -->
-                        <i class="fas fa-file-excel"></i>
-                    </div>
-                    <span class="tool-name">MS Office Suite</span>
-                </div>
-                
-                <!-- Additional tools can be added here following the same pattern -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Data Analyst & Visualization Specialist</h1>
+            <p>Transforming complex data into actionable insights through powerful visualizations and analytics</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a passionate data analyst with expertise in statistical analysis, data visualization, and business intelligence. With a background in Economics and Statistics, I specialize in transforming raw data into meaningful insights that drive decision-making.</p>
+                <p>My approach combines technical skills with strong business acumen, allowing me to bridge the gap between data and strategy. I'm proficient in various analytics tools and programming languages, and I'm constantly learning new techniques to enhance my analytical capabilities.</p>
+                <p>When I'm not crunching numbers, you can find me exploring new data visualization techniques or contributing to open-source data projects.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="Abigael Cherotich">
             </div>
         </div>
-        
-        <!-- Your existing portfolio and contact sections here -->
-    </div>
-</body>
-</html>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>SQL</h3>
+                    <p>Advanced querying and database management</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Data analysis with Pandas, NumPy, and visualization libraries</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Power BI</h3>
+                    <p>Interactive dashboards and business intelligence</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Tableau</h3>
+                    <p>Data visualization and storytelling</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h3>Excel</h3>
+                    <p>Advanced analytics and modeling</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Machine Learning</h3>
+                    <p>Predictive modeling and algorithms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Customer Segmentation">
+                </div>
+                <div class="project-info">
+                    <h3>Customer Segmentation</h3>
+                    <p>Implemented K-means clustering to segment retail customers based on purchasing behavior.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80" alt="Sales Dashboard">
+                </div>
+                <div class="project-info">
+                    <h3>Sales Performance Dashboard</h3>
+                    <p>Interactive Power BI dashboard tracking KPIs across multiple regions.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Predictive Model">
+                </div>
+                <div class="project-info">
+                    <h3>Churn Prediction Model</h3>
+                    <p>Machine learning model predicting customer churn with 85% accuracy.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p>I'm currently available for freelance work or full-time positions. If you have a project you want to get started or think you need my help with something, then get in touch.</p>
+                <p><i class="fas fa-envelope"></i> abigaelcherotich867@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +254 704 990 012</p>
+                <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-medium"></i></a>
+        </div>
+        <p>&copy; 2025 Abigael Cherotich. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
