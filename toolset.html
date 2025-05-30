@@ -69,6 +69,8 @@
       padding: 1.5rem;
       width: 150px;
       transition: transform 0.3s ease;
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
     }
 
     .tool-card:hover {
@@ -79,6 +81,13 @@
       width: 48px;
       height: 48px;
       margin-bottom: 1rem;
+      transition: transform 0.4s ease, filter 0.4s ease;
+      animation: pulse 2.5s infinite ease-in-out;
+    }
+
+    .tool-card:hover img {
+      animation: bounce 0.8s;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
     }
 
     .tool-card p {
@@ -86,6 +95,41 @@
       font-weight: 600;
       font-size: 1rem;
       color: #1a1a1a;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.08);
+        opacity: 0.9;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     footer {
@@ -121,51 +165,51 @@
   <section class="toolset-section">
     <h2>My Toolset</h2>
     <div class="tools-grid">
-      <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 0.1s">
         <img src="images/Icon/r_gui.jpg" alt="R">
         <p>R</p>
       </div>
-      <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 0.2s">
         <img src="images/Icon/python.jpg" alt="Python">
         <p>Python</p>
       </div>
-      <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 0.3s">
         <img src="images/Icon/powerbi.jpg" alt="Power BI">
         <p>Power BI</p>
       </div>
-      <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 0.4s">
         <img src="images/Icon/stata.jpg" alt="Stata">
         <p>Stata</p>
       </div>
-      <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 0.5s">
         <img src="images/Icon/excel.jpg" alt="Excel">
         <p>Excel</p>
       </div>
-      <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 0.6s">
         <img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets">
         <p>Sheets</p>
       </div>
-      <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 0.7s">
         <img src="images/Icon/looker.jpg" alt="Looker Studio">
         <p>Looker Studio</p>
       </div>
-      <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 0.8s">
         <img src="images/Icon/sql_obed.jpg" alt="SQL">
         <p>SQL</p>
       </div>
-        <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 0.9s">
         <img src="images/Icon/tableau.jpg" alt="Tableau">
-      <p>Tableau</p>
+        <p>Tableau</p>
       </div>   
-     <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 1s">
         <img src="images/Icon/microsoft_forms.jpg" alt="Microsoft Forms">
         <p>Microsoft Forms</p>
       </div> 
-      <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 1.1s">
         <img src="images/Icon/google_forms.jpg" alt="Google Forms">
         <p>Google Forms</p>
       </div> 
-      <div class="tool-card">
+      <div class="tool-card" style="animation-delay: 1.2s">
         <img src="images/Icon/perplexy_AI.jpg" alt="Perplexity AI">
         <p>Perplexity AI</p>
       </div> 
@@ -176,7 +220,7 @@
     <div style="max-width: 600px; margin: auto;">
       <h2>Contact Me</h2>
       <p>Email: <a href="mailto:obednyangena@outlook.com">obednyangena@outlook.com</a></p>
-      <p>Phone: <a href="tel:+254700349788">+254 700349788 </a></p>
+      <p>Phone: <a href="tel:+254700349788">+254 700349788</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/obednyangena-economist">obednyangena-economist</a></p>
     </div>
   </footer>
