@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letters | Obed Nyangena</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
 
+    header {
+      background-color: #111827;
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    .letters-section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .letters-section h2 {
+      font-size: 2rem;
+      color: #1d3557;
+      margin-bottom: 1rem;
+    }
+
+    .letters-section p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+
+    ul.letters-list {
+      padding-left: 1.2rem;
+      list-style: disc;
+      line-height: 1.6;
+    }
+
+    ul.letters-list li {
+      margin-bottom: 0.75rem;
+    }
+
+    ul.letters-list li::marker {
+      color: #1d3557;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      background-color: #0f1e33;
+      color: white;
+    }
+
+    footer a {
+      color: #aadfff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Obed Nyangena</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="toolset.html">Toolset</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="letters.html">Letters</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="letters-section">
+    <h2>Letters</h2>
+    <p>My commentaries are unsolicited and mainly focus on topical issues of national importance. These commentaries have featured in both local and international newspapers. Broader arguments of these commentaries are as presented in my research articles section. A selection of these commentaries <strong>[click to read]</strong> is as listed below:</p>
+    <ul class="letters-list">
+      <li>Why cockroaches could be the next super food, saviour of humanity</li>
+      <li>Banks need to keep up with thieves’ pace in tech to save funds</li>
+      <li>Kenya ranked Africa’s finest in intellectual property</li>
+      <li>Speak up to tame violence against women</li>
+      <li>Singapore lessons a warning Aug polls won’t bring change</li>
+      <li>Climate warning can boost food security</li>
+      <li>Astute leadership needed to guide pandemic crisis</li>
+      <li>Target behaviour change to tackle lifestyle diseases</li>
+      <li>Why recurrent malaria outbreaks are worrying</li>
+      <li>Role of ethics in combating climate change</li>
+      <li>Why banks should amplify risk mitigation</li>
+      <li>Why it’s time to re-evaluate airspace safety</li>
+      <li>Unravelling Kenya, Somalia territorial row</li>
+      <li>Revamp counter-terrorism tools to win</li>
+      <li>Move to scrap CRB clearance fees welcome</li>
+      <li>Sustainable solution needed to end weather woes</li>
+      <li>Teaching climate change in schools right step</li>
+      <li>Rains have again exposed our unpreparedness</li>
+      <li>How technology will continue to influence our lives</li>
+      <li>Long-term solutions needed to tackle drought</li>
+      <li>COVID-19: lessons for Africa from determined countries</li>
+      <li>El Niño, La Niña spiralling Africa’s food insecurity</li>
+      <li>Responsive disaster risk reduction key for development</li>
+      <li>Rethink climate change, conflicts for sustainable future</li>
+      <li>Coronavirus backpedalling counter-terrorism gains</li>
+      <li>Our open refusal to exercise increases lifestyle diseases</li>
+      <li>Collective effort will boost fight against Covid-19</li>
+      <li>Tame constant threat of organised crime in South Coast</li>
+      <li>Role of ethics in meeting Kenya’s climate change adaptation needs</li>
+      <li>Government should increase resources towards taming HIV</li>
+      <li>Big Four agenda easier to achieve with technology</li>
+      <li>Protecting Mau is key in realising Big Four agenda</li>
+      <li>Protect the Mau Complex at all cost</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div style="max-width: 600px; margin: auto;">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:obednyangena@outlook.com">obednyangena@outlook.com</a></p>
+      <p>Phone: <a href="tel:+254700349788">+254 700349788</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/obednyangena-economist">obednyangena-economist</a></p>
+    </div>
+  </footer>
+</body>
+</html>
