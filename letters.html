@@ -12,120 +12,26 @@
       background-color: #f5f7fa;
       color: #1a1a1a;
     }
-
     header {
       background-color: #111827;
       color: white;
       padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      display: flex; justify-content: space-between; align-items: center;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 800;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      opacity: 0.7;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      color: #1d3557;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .article {
-      display: flex;
-      flex-direction: column;
-      background-color: #fff;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    .article-img {
-      width: 100%;
-      max-height: 240px;
-      object-fit: cover;
-    }
-
-    .article-content {
-      padding: 1.2rem;
-    }
-
-    .article-title {
-      font-size: 1.25rem;
-      margin: 0 0 0.5rem 0;
-      color: #1d3557;
-    }
-
-    .article-publisher {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 0.8rem;
-    }
-
-    .article-summary {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .read-link {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .read-link:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #0f1e33;
-      color: white;
-    }
-
-    footer a {
-      color: #aadfff;
-      text-decoration: none;
-    }
-
-    @media(min-width: 768px) {
-      .article {
-        flex-direction: row;
-      }
-
-      .article-img {
-        flex: 1 1 40%;
-        max-height: none;
-        height: auto;
-      }
-
-      .article-content {
-        flex: 2 1 60%;
-      }
-    }
+    header h1 { margin: 0; font-size: 1.8rem; font-weight: 800; }
+    nav a { color: white; margin-left: 1.5rem; text-decoration: none; font-weight: 500; }
+    nav a:hover { opacity: 0.7; }
+    .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+    .section-title { font-size: 2rem; color: #1d3557; margin-bottom: 1rem; text-align: center; }
+    .article { display: flex; flex-direction: column; background: #fff; border-radius:10px; margin-bottom:2rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow:hidden; }
+    .article-img { width:100%; max-height:240px; object-fit:cover; }
+    .article-content { padding: 1.2rem; }
+    .article-title { font-size:1.25rem; margin:0 0 .5rem; color: #1d3557; }
+    .article-publisher { font-size:.9rem; color:#6b7280; margin-bottom:.8rem; }
+    .article-summary { font-size:1rem; margin-bottom:1rem; }
+    .read-link { color:#2563eb; text-decoration:none; font-weight:600; }
+    .read-link:hover { text-decoration:underline; }
+    footer { text-align: center; padding: 2rem; background-color: #0f1e33; color: white; }
   </style>
 </head>
 <body>
@@ -143,21 +49,109 @@
   </header>
 
   <main class="container">
-    <h2 class="section-title">Featured Articles</h2>
+    <h2 class="section-title">Opinion Letters & Publications</h2>
 
-    <!-- Sample Article Card -->
+    <!-- 1 -->
     <article class="article">
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Banking Technology" class="article-img" />
+      <img src="https://source.unsplash.com/collection/190727/800x400" alt="Disaster risk reduction" class="article-img" />
       <div class="article-content">
-        <h3 class="article-title">Banks need to keep up with thieves’ pace in tech to save funds</h3>
-        <p class="article-publisher">Published in The Star (Kenya)</p>
-        <p class="article-summary">Discusses the importance of technological advancements in banking to combat financial crimes.</p>
-        <a href="https://www.the-star.co.ke/news/2020-02-26-our-open-refusal-to-exercise-increases-lifestyle-diseases" class="read-link" target="_blank" rel="noopener noreferrer">Read here</a>
+        <h3 class="article-title">Responsive disaster risk reduction key for development</h3>
+        <p class="article-publisher">The Star (Kenya), Oct 13 2021</p>
+        <p class="article-summary">Discusses why proactive disaster risk reduction must be woven into development planning to build resilience.</p>
+        <a href="https://www.the-star.co.ke/news/2021-10-13-obed-nyangena-responsive-disaster-risk-reduction-key-for-development" class="read-link" target="_blank">Read here</a>
       </div>
     </article>
 
-    <!-- Add more article blocks below by copying and updating -->
-    
+    <!-- 2 -->
+    <article class="article">
+      <img src="https://source.unsplash.com/collection/190728/800x400" alt="Organised crime" class="article-img" />
+      <div class="article-content">
+        <h3 class="article-title">Tame threat of organised crime in South Coast</h3>
+        <p class="article-publisher">The Star (Kenya), Oct 19 2021</p>
+        <p class="article-summary">Explores joint strategies by local communities and agencies to curb rising organised crime in the coastal region.</p>
+        <a href="https://www.the-star.co.ke/news/2021-10-19-nyangena-and-imbali-tame-constant-threat-of-organised-crime-in-south-coast" class="read-link" target="_blank">Read here</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="article">
+      <img src="https://source.unsplash.com/collection/190729/800x400" alt="Intellectual property" class="article-img" />
+      <div class="article-content">
+        <h3 class="article-title">Kenya ranked Africa’s finest in intellectual property</h3>
+        <p class="article-publisher">The Star (Kenya), Nov 19 2021</p>
+        <p class="article-summary">Highlights Kenya’s achievements and potential in intellectual property rights and innovation ecosystems.</p>
+        <a href="https://www.the-star.co.ke/news/2021-11-19-nyangena-obed-kenya-ranked-africas-finest-in-intellectual-property" class="read-link" target="_blank">Read here</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="article">
+      <img src="https://source.unsplash.com/collection/190730/800x400" alt="Protecting Mau" class="article-img" />
+      <div class="article-content">
+        <h3 class="article-title">Protecting Mau is key in realising Big Four agenda</h3>
+        <p class="article-publisher">The Star (Kenya), Jul 27 2018</p>
+        <p class="article-summary">Connection between environmental conservation in Mau catchment and Kenya’s Big Four development strategy.</p>
+        <a href="https://www.the-star.co.ke/siasa/2018-07-27-protecting-mau-is-key-in-realising-big-four-agenda/" class="read-link" target="_blank">Read here</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="article">
+      <img src="https://source.unsplash.com/collection/190731/800x400" alt="Climate change conflicts" class="article-img" />
+      <div class="article-content">
+        <h3 class="article-title">Rethink climate change conflicts for sustainable future</h3>
+        <p class="article-publisher">The Star (Kenya), Oct 26 2020</p>
+        <p class="article-summary">Argues how climate-induced conflicts need reframing to improve sustainable policy outcomes.</p>
+        <a href="https://www.the-star.co.ke/news/2020-10-26-rethink-climate-change-conflicts-for-sustainable-future" class="read-link" target="_blank">Read here</a>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="article">
+      <img src="https://source.unsplash.com/collection/190732/800x400" alt="Coronavirus and counter-terrorism" class="article-img" />
+      <div class="article-content">
+        <h3 class="article-title">Coronavirus backpedalling counter-terrorism gains</h3>
+        <p class="article-publisher">The Star (Kenya), Jul 21 2020</p>
+        <p class="article-summary">Examines the pandemic’s unintended consequences on counter-terrorism efforts in Kenya.</p>
+        <a href="https://www.the-star.co.ke/opinion/star-blogs/2020-07-21-coronavirus-backpedalling-counter-terrorism-gains" class="read-link" target="_blank">Read here</a>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="article">
+      <img src="https://source.unsplash.com/collection/190733/800x400" alt="Ethics and adaptation" class="article-img" />
+      <div class="article-content">
+        <h3 class="article-title">Role of ethics in meeting Kenya’s climate change adaptation needs</h3>
+        <p class="article-publisher">The Star (Kenya), Jan 09 2020</p>
+        <p class="article-summary">Highlights the intersection of ethical decision-making and climate adaptation strategies.</p>
+        <a href="https://the-star.co.ke/opinion/2020-01-09-role-of-ethics-in-meeting-kenyas-climate-change-adaptation-needs/" class="read-link" target="_blank">Read here</a>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="article">
+      <img src="https://source.unsplash.com/collection/190734/800x400" alt="Singapore lessons" class="article-img" />
+      <div class="article-content">
+        <h3 class="article-title">Singapore lessons: a warning – Aug polls won’t bring change</h3>
+        <p class="article-publisher">Business Daily Africa</p>
+        <p class="article-summary">Compares governance reforms in Singapore and argues why elections alone don’t guarantee change in Kenya.</p>
+        <a href="https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/singapore-lessons-a-warning-aug-polls-won-t-bring-change-3821284" class="read-link" target="_blank">Read here</a>
+      </div>
+    </article>
+
+    <!-- 9 -->
+    <article class="article">
+      <img src="https://source.unsplash.com/collection/190735/800x400" alt="Africa IP" class="article-img" />
+      <div class="article-content">
+        <h3 class="article-title">Kenya: Africa’s finest in intellectual property</h3>
+        <p class="article-publisher">Business Daily Africa</p>
+        <p class="article-summary">Further discussion of Kenya’s leadership in intellectual property rights and innovation development.</p>
+        <a href="https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/kenya-africa-finest-intellectual-property-3616698" class="read-link" target="_blank">Read here</a>
+      </div>
+    </article>
+
+    <!-- 10+ (letters from BDA) -->
+    <!-- You can continue similarly for each Business Daily “letters” link -->
   </main>
 
   <footer>
