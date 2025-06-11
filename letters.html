@@ -35,52 +35,61 @@
   </header>
 
   <main class="container">
-    <h2 class="section-title">Selected Opinion Letters</h2>
-    <div class="grid">
-      <!-- Example Article Start -->
-      <div class="article">
-        <img src="https://source.unsplash.com/featured/?disaster" alt="Disaster Reduction" class="article-img">
-        <div class="article-content">
-          <h3 class="article-title">Responsive Disaster Risk Reduction Key for Development</h3>
-          <p class="article-publisher">The Star, Oct 13, 2021</p>
-          <p class="article-summary">Obed Nyangena highlights how risk-sensitive development is crucial for resilient infrastructure and socio-economic progress.</p>
-          <a class="read-link" href="https://www.the-star.co.ke/news/2021-10-13-obed-nyangena-responsive-disaster-risk-reduction-key-for-development" target="_blank">Read Article</a>
-        </div>
-      </div>
-      <!-- Additional Articles Start -->
-      <div class="article">
-        <img src="https://source.unsplash.com/featured/?crime" alt="Organised Crime" class="article-img">
-        <div class="article-content">
-          <h3 class="article-title">Tame Constant Threat of Organised Crime in South Coast</h3>
-          <p class="article-publisher">The Star, Oct 19, 2021</p>
-          <p class="article-summary">Explores community-based and intelligence-led responses to organised crime in Kenya's South Coast.</p>
-          <a class="read-link" href="https://www.the-star.co.ke/news/2021-10-19-nyangena-and-imbali-tame-constant-threat-of-organised-crime-in-south-coast" target="_blank">Read Article</a>
-        </div>
-      </div>
-      <div class="article">
-        <img src="https://source.unsplash.com/featured/?intellectual-property" alt="Intellectual Property" class="article-img">
-        <div class="article-content">
-          <h3 class="article-title">Kenya Ranked Africa's Finest in Intellectual Property</h3>
-          <p class="article-publisher">The Star, Nov 19, 2021</p>
-          <p class="article-summary">An in-depth analysis of Kenya’s progress in protecting and promoting intellectual property rights.</p>
-          <a class="read-link" href="https://www.the-star.co.ke/news/2021-11-19-nyangena-obed-kenya-ranked-africas-finest-in-intellectual-property" target="_blank">Read Article</a>
-        </div>
-      </div>
-      <div class="article">
-        <img src="https://source.unsplash.com/featured/?climate" alt="Climate Protection" class="article-img">
-        <div class="article-content">
-          <h3 class="article-title">Protecting Mau is Key in Realising Big Four Agenda</h3>
-          <p class="article-publisher">The Star, Jul 27, 2018</p>
-          <p class="article-summary">Discusses the crucial role of forest conservation in Kenya's development blueprint—the Big Four Agenda.</p>
-          <a class="read-link" href="https://www.the-star.co.ke/siasa/2018-07-27-protecting-mau-is-key-in-realising-big-four-agenda/" target="_blank">Read Article</a>
-        </div>
-      </div>
-      <!-- Additional article blocks to follow -->
-    </div>
+    <h2 class="section-title">Opinion Letters & Publications</h2>
+    <div class="grid" id="articles-container"></div>
   </main>
 
   <footer>
     <p>© 2025 Obed Nyangena. All rights reserved.</p>
   </footer>
+
+  <script>
+    const articles = [
+      {
+        title: "Responsive Disaster Risk Reduction Key for Development",
+        publisher: "The Star, Oct 13, 2021",
+        summary: "Obed Nyangena highlights how risk-sensitive development is crucial for resilient infrastructure and socio-economic progress.",
+        link: "https://www.the-star.co.ke/news/2021-10-13-obed-nyangena-responsive-disaster-risk-reduction-key-for-development",
+        imageKeyword: "disaster"
+      },
+      {
+        title: "Tame Constant Threat of Organised Crime in South Coast",
+        publisher: "The Star, Oct 19, 2021",
+        summary: "Explores community-based and intelligence-led responses to organised crime in Kenya's South Coast.",
+        link: "https://www.the-star.co.ke/news/2021-10-19-nyangena-and-imbali-tame-constant-threat-of-organised-crime-in-south-coast",
+        imageKeyword: "crime"
+      },
+      {
+        title: "Kenya Ranked Africa's Finest in Intellectual Property",
+        publisher: "The Star, Nov 19, 2021",
+        summary: "An in-depth analysis of Kenya’s progress in protecting and promoting intellectual property rights.",
+        link: "https://www.the-star.co.ke/news/2021-11-19-nyangena-obed-kenya-ranked-africas-finest-in-intellectual-property",
+        imageKeyword: "intellectual property"
+      },
+      {
+        title: "Protecting Mau is Key in Realising Big Four Agenda",
+        publisher: "The Star, Jul 27, 2018",
+        summary: "Discusses the crucial role of forest conservation in Kenya's development blueprint—the Big Four Agenda.",
+        link: "https://www.the-star.co.ke/siasa/2018-07-27-protecting-mau-is-key-in-realising-big-four-agenda/",
+        imageKeyword: "forest"
+      }
+    ];
+
+    const container = document.getElementById("articles-container");
+    articles.forEach(article => {
+      const articleEl = document.createElement("div");
+      articleEl.className = "article";
+      articleEl.innerHTML = `
+        <img src="https://source.unsplash.com/featured/?${encodeURIComponent(article.imageKeyword)}" alt="${article.imageKeyword}" class="article-img">
+        <div class="article-content">
+          <h3 class="article-title">${article.title}</h3>
+          <p class="article-publisher">${article.publisher}</p>
+          <p class="article-summary">${article.summary}</p>
+          <a class="read-link" href="${article.link}" target="_blank">Read Article</a>
+        </div>
+      `;
+      container.appendChild(articleEl);
+    });
+  </script>
 </body>
 </html>
