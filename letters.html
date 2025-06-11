@@ -6,98 +6,22 @@
   <title>Letters | Obed Nyangena</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f5f7fa;
-      color: #1a1a1a;
-    }
-
-    header, footer {
-      background: #111827;
-      color: white;
-      padding: 1rem 2rem;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 1rem;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      opacity: 0.8;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      text-align: center;
-      color: #1d3557;
-      margin-bottom: 2rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-
-    .article {
-      display: flex;
-      flex-direction: column;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .article-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .article-content {
-      padding: 1rem;
-    }
-
-    .article-title {
-      margin: 0 0 0.5rem;
-      font-size: 1.2rem;
-      color: #1d3557;
-    }
-
-    .article-publisher {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 0.5rem;
-    }
-
-    .article-summary {
-      margin-bottom: 1rem;
-    }
-
-    .read-link {
-      color: #2563eb;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .read-link:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      .article-title {
-        font-size: 1rem;
-      }
-    }
+    body { margin:0; font-family:'Inter',sans-serif; background:#f5f7fa; color:#1a1a1a; }
+    header, footer { background:#111827; color:white; padding:1rem 2rem; }
+    nav a { color:white; margin-left:1rem; text-decoration:none; }
+    nav a:hover { opacity:0.8; }
+    .container { max-width:1200px; margin:2rem auto; padding:0 1rem; }
+    .section-title { font-size:2rem; text-align:center; color:#1d3557; margin-bottom:2rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:2rem; }
+    .article { display:flex; flex-direction:column; background:white; border-radius:10px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    .article-img { width:100%; height:200px; object-fit:cover; }
+    .article-content { padding:1rem; }
+    .article-title { margin:0 0 .5rem; font-size:1.2rem; color:#1d3557; }
+    .article-publisher { font-size:.9rem; color:#6b7280; margin-bottom:.5rem; }
+    .article-summary { margin-bottom:1rem; }
+    .read-link { color:#2563eb; font-weight:600; text-decoration:none; }
+    .read-link:hover { text-decoration:underline; }
+    @media (max-width:600px){ .article-title { font-size:1rem; } }
   </style>
 </head>
 <body>
@@ -111,22 +35,120 @@
   </header>
 
   <main class="container">
-    <h2 class="section-title">Featured Opinion Letters</h2>
+    <h2 class="section-title">Selected Opinion Letters</h2>
     <div class="grid">
-
-      <!-- Repeat this block for each article -->
+      <!-- 1 -->
       <article class="article">
-        <img class="article-img" src="https://source.unsplash.com/800x400/?disaster,relief" alt="Disaster relief">
+        <img class="article-img" src="https://source.unsplash.com/800x400/?disaster,relief" alt="">
         <div class="article-content">
           <h3 class="article-title">Responsive disaster risk reduction key for development</h3>
-          <p class="article-publisher">The Star (Kenya), Oct 13 2021</p>
+          <p class="article-publisher">The Star, Oct 13 2021</p>
           <p class="article-summary">Proactive disaster risk reduction strengthens sustainable development and community resilience.</p>
           <a class="read-link" href="https://www.the-star.co.ke/news/2021-10-13-obed-nyangena-responsive-disaster-risk-reduction-key-for-development" target="_blank">Read here</a>
         </div>
       </article>
 
-      <!-- Add more articles in same format -->
+      <!-- 2 -->
+      <article class="article">
+        <img class="article-img" src="https://source.unsplash.com/800x400/?crime,coast" alt="">
+        <div class="article-content">
+          <h3 class="article-title">Tame threat of organised crime in South Coast</h3>
+          <p class="article-publisher">The Star, Oct 19 2021</p>
+          <p class="article-summary">Community-led strategies to curb coastal crime threats.</p>
+          <a class="read-link" href="https://www.the-star.co.ke/news/2021-10-19-nyangena-and-imbali-tame-constant-threat-of-organised-crime-in-south-coast" target="_blank">Read here</a>
+        </div>
+      </article>
 
+      <!-- 3 -->
+      <article class="article">
+        <img class="article-img" src="https://source.unsplash.com/800x400/?intellectual,property" alt="">
+        <div class="article-content">
+          <h3 class="article-title">Kenya ranked Africa’s finest in intellectual property</h3>
+          <p class="article-publisher">The Star, Nov 19 2021</p>
+          <p class="article-summary">Kenya’s achievements in IP rights and innovation ecosystems.</p>
+          <a class="read-link" href="https://www.the-star.co.ke/news/2021-11-19-nyangena-obed-kenya-ranked-africas-finest-in-intellectual-property" target="_blank">Read here</a>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="article">
+        <img class="article-img" src="https://source.unsplash.com/800x400/?forest,environment" alt="">
+        <div class="article-content">
+          <h3 class="article-title">Protecting Mau is key in realising Big Four agenda</h3>
+          <p class="article-publisher">The Star, Jul 27 2018</p>
+          <p class="article-summary">Conservation efforts in Mau catchment area for national development.</p>
+          <a class="read-link" href="https://www.the-star.co.ke/siasa/2018-07-27-protecting-mau-is-key-in-realising-big-four-agenda/" target="_blank">Read here</a>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="article">
+        <img class="article-img" src="https://source.unsplash.com/800x400/?climate,conflict" alt="">
+        <div class="article-content">
+          <h3 class="article-title">Rethink climate change conflicts for sustainable future</h3>
+          <p class="article-publisher">The Star, Oct 26 2020</p>
+          <p class="article-summary">Assessing how climate-induced conflict impacts sustainability.</p>
+          <a class="read-link" href="https://www.the-star.co.ke/news/2020-10-26-rethink-climate-change-conflicts-for-sustainable-future" target="_blank">Read here</a>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="article">
+        <img class="article-img" src="https://source.unsplash.com/800x400/?covid,security" alt="">
+        <div class="article-content">
+          <h3 class="article-title">Coronavirus backpedalling counter‑terrorism gains</h3>
+          <p class="article-publisher">The Star, Jul 21 2020</p>
+          <p class="article-summary">Impacts of COVID‑19 on Kenya’s counter‑terrorism efforts.</p>
+          <a class="read-link" href="https://www.the-star.co.ke/opinion/star-blogs/2020-07-21-coronavirus-backpedalling-counter-terrorism-gains" target="_blank">Read here</a>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="article">
+        <img class="article-img" src="https://source.unsplash.com/800x400/?ethics,climate" alt="">
+        <div class="article-content">
+          <h3 class="article-title">Role of ethics in meeting Kenya’s climate change adaptation needs</h3>
+          <p class="article-publisher">The Star, Jan 09 2020</p>
+          <p class="article-summary">How ethical considerations shape climate adaptation strategies.</p>
+          <a class="read-link" href="https://the-star.co.ke/opinion/2020-01-09-role-of-ethics-in-meeting-kenyas-climate-change-adaptation-needs/" target="_blank">Read here</a>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="article">
+        <img class="article-img" src="https://source.unsplash.com/800x400/?election,singapore" alt="">
+        <div class="article-content">
+          <h3 class="article-title">Singapore lessons: Aug polls won’t bring change</h3>
+          <p class="article-publisher">Business Daily Africa, Aug 2021</p>
+          <p class="article-summary">Argues that elections alone may fail to deliver real change.</p>
+          <a class="read-link" href="https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/singapore-lessons-a-warning-aug-polls-won-t-bring-change-3821284" target="_blank">Read here</a>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="article">
+        <img class="article-img" src="https://source.unsplash.com/800x400/?innovation,africa" alt="">
+        <div class="article-content">
+          <h3 class="article-title">Kenya: Africa’s finest in intellectual property</h3>
+          <p class="article-publisher">Business Daily Africa</p>
+          <p class="article-summary">Further insight into Kenya’s IP leadership across Africa.</p>
+          <a class="read-link" href="https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/kenya-africa-finest-intellectual-property-3616698" target="_blank">Read here</a>
+        </div>
+      </article>
+
+      <!-- 10-28: Placeholder cards -->
+      <!-- Just copy this block and update as needed -->
+      <article class="article">
+        <img class="article-img" src="https://source.unsplash.com/800x400/?women,violence" alt="">
+        <div class="article-content">
+          <h3 class="article-title">Speak to Ame: Violence against women</h3>
+          <p class="article-publisher">Business Daily Africa</p>
+          <p class="article-summary">[Insert summary here]</p>
+          <a class="read-link" href="https://www.businessdailyafrica.com/bd/opinion-analysis/letters/speakt-ame-violence-women-3581700" target="_blank">Read here</a>
+        </div>
+      </article>
+
+      <!-- Repeat up to 28 with relevant queries in src and correct href/title -->
     </div>
   </main>
 
