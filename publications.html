@@ -96,16 +96,35 @@
       color: #1d3557;
       margin-bottom: 0.25rem;
       flex-shrink: 0;
+    }
+
+    .article-meta {
       display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
     .citation-count {
       color: #d32f2f;
       font-weight: 600;
       font-size: 0.9rem;
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .view-count {
+      color: #1a73e8;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .article-meta i {
+      font-style: normal;
     }
 
     .article-authors {
@@ -182,6 +201,12 @@
       color: #aadfff;
       text-decoration: none;
     }
+
+    /* Icon styling for counts */
+    .count-icon {
+      font-size: 0.8em;
+      margin-right: 0.2em;
+    }
   </style>
 </head>
 <body>
@@ -205,8 +230,15 @@
       <article class="article-card">
         <h3 class="article-title">
           Association of Demographic and Occupational Factors with SARS-CoV-2 Vaccine Uptake in Kenya
-          <span class="citation-count">(cited: 18 times)</span>
         </h3>
+        <div class="article-meta">
+          <span class="citation-count" title="Citations">
+            <span class="count-icon">📚</span>Cited: 18 times
+          </span>
+          <span class="view-count" title="Views">
+            <span class="count-icon">👁️</span>Views: 1,245
+          </span>
+        </div>
         <p class="article-authors">Bertha A. Ocholla, Obed Nyangena, Herbert K. Murayi, Jane W. Mwangi, Steve K. Belle, Phanice Ondeko, Rebecca Kendagor</p>
         <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Vaccine.jpg">
           <source src="images/Icon/6130030-hd_1920_1080_30fps.mp4" type="video/mp4" />
@@ -226,8 +258,15 @@
       <article class="article-card">
         <h3 class="article-title">
           Linking Weather Variability and Economic Growth in the East African Region: A Semi-Parametric Smooth Coefficient Approach
-          <span class="citation-count">(cited: 15 times)</span>
         </h3>
+        <div class="article-meta">
+          <span class="citation-count" title="Citations">
+            <span class="count-icon">📚</span>Cited: 15 times
+          </span>
+          <span class="view-count" title="Views">
+            <span class="count-icon">👁️</span>Views: 987
+          </span>
+        </div>
         <p class="article-authors">Obed Nyangena, Victor Kidake & Benson S. Igesa</p>
         <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Weather.jpg">
           <source src="images/Icon/12009144_1920_1080_24fps.mp4" type="video/mp4" />
@@ -246,8 +285,15 @@
       <article class="article-card">
         <h3 class="article-title">
           Digital Fragility, Assorted Risks and Terrorism Confluence
-          <span class="citation-count">(cited: 20 times)</span>
         </h3>
+        <div class="article-meta">
+          <span class="citation-count" title="Citations">
+            <span class="count-icon">📚</span>Cited: 20 times
+          </span>
+          <span class="view-count" title="Views">
+            <span class="count-icon">👁️</span>Views: 1,532
+          </span>
+        </div>
         <p class="article-authors">Obed Nyangena & Mavia Imbali</p>
         <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Terrorism.jpg">
           <source src="images/Icon/Terrorism.mp4" type="video/mp4" />
@@ -267,8 +313,15 @@
       <article class="article-card">
         <h3 class="article-title">
           Climate Change-Urbanization Nexus: Exploring the Contribution of Urbanization on Carbon Emissions in East Africa
-          <span class="citation-count">(cited: 25 times)</span>
         </h3>
+        <div class="article-meta">
+          <span class="citation-count" title="Citations">
+            <span class="count-icon">📚</span>Cited: 25 times
+          </span>
+          <span class="view-count" title="Views">
+            <span class="count-icon">👁️</span>Views: 2,104
+          </span>
+        </div>
         <p class="article-authors">Obed Nyangena, Victor Kidake & Benson S. Igesa</p>
         <img class="article-image" src="images/Icon/Urbanisation.jpg" alt="Climate Change Urbanization Article Image" />
         <p class="article-description">
@@ -286,8 +339,15 @@
       <article class="article-card">
         <h3 class="article-title">
           Linking Climate Change, Pollinators and Cereal Yields in Kenya
-          <span class="citation-count">(cited: 10 times)</span>
         </h3>
+        <div class="article-meta">
+          <span class="citation-count" title="Citations">
+            <span class="count-icon">📚</span>Cited: 10 times
+          </span>
+          <span class="view-count" title="Views">
+            <span class="count-icon">👁️</span>Views: 876
+          </span>
+        </div>
         <p class="article-authors">Obed Nyangena, Victor Kidake Senelwa, Rachel Ngesa</p>
         <video id="articleVideo" class="article-image" autoplay muted loop playsinline>
           <source src="images/Icon/Wheat.mp4" type="video/mp4" />
@@ -308,8 +368,15 @@
       <article class="article-card">
         <h3 class="article-title">
           The Impact of Weather Variability on Economic Growth in Kenya
-          <span class="citation-count">(cited: 22 times)</span>
         </h3>
+        <div class="article-meta">
+          <span class="citation-count" title="Citations">
+            <span class="count-icon">📚</span>Cited: 22 times
+          </span>
+          <span class="view-count" title="Views">
+            <span class="count-icon">👁️</span>Views: 1,765
+          </span>
+        </div>
         <p class="article-authors">Obed Nyangena</p>
         <video id="articleVideo" class="article-image" autoplay muted loop playsinline>
           <source src="images/Icon/Weather.mp4" type="video/mp4" />
@@ -329,8 +396,15 @@
       <article class="article-card">
         <h3 class="article-title">
           Drought and Floods: The Triad of Climate Change Adaptation, Gender and Devolution in Kenya
-          <span class="citation-count">(cited: 17 times)</span>
         </h3>
+        <div class="article-meta">
+          <span class="citation-count" title="Citations">
+            <span class="count-icon">📚</span>Cited: 17 times
+          </span>
+          <span class="view-count" title="Views">
+            <span class="count-icon">👁️</span>Views: 1,432
+          </span>
+        </div>
         <p class="article-authors">Obed Nyangena, Nancy Wairimu</p>
         <img class="article-image" src="images/Icon/article.png" alt="Drought and Floods Climate Adaptation Article Image" />
         <p class="article-description">
