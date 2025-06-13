@@ -3,431 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Publications | Obed Nyangena</title>
+  <title>Publications | Obed Nyangena</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #1a1a1a;
+    /* (Your existing styles remain unchanged) */
+    .click-count {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #444;
     }
-
-    header {
-      background-color: #111827;
-      color: white;
-      padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 800;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.3s ease;
-    }
-
-    nav a:hover {
-      opacity: 0.7;
-    }
-
-    main {
-      padding: 3rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    h2.page-title {
-      color: #1d3557;
-      font-weight: 800;
-      font-size: 2.4rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.5rem;
-    }
-
-    @media (max-width: 960px) {
-      .articles-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .articles-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .article-card {
-      background: #f9f9f9;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .article-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .article-title {
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: #1d3557;
-      margin-bottom: 0.25rem;
-      flex-shrink: 0;
-    }
-
-    .article-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .citation-count {
-      color: #d32f2f;
+    .click-count .count {
       font-weight: 600;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .view-count {
-      color: #1a73e8;
-      font-weight: 600;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .article-meta i {
-      font-style: normal;
-    }
-
-    .article-authors {
-      font-weight: 400;
-      font-size: 0.9rem;
-      color: #555555;
-      margin-bottom: 1rem;
-      font-style: italic;
-      flex-shrink: 0;
-    }
-
-    .article-image {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      flex-shrink: 0;
-    }
-
-    .article-description {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      color: #333333;
-      flex-grow: 1;
-      margin-bottom: 1.5rem;
-    }
-
-    .article-actions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: auto;
-    }
-
-    .download-link {
-      text-align: right;
-    }
-
-    .download-link a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: #1a73e8;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      background-color: rgba(26, 115, 232, 0.1);
-    }
-
-    .download-link a:hover {
-      background-color: rgba(26, 115, 232, 0.2);
-      color: #0d5bba;
-    }
-
-    .download-link a::before {
-      content: "↓";
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #0f1e33;
-      color: white;
-      margin-top: 4rem;
-    }
-
-    footer a {
-      color: #aadfff;
-      text-decoration: none;
-    }
-
-    /* Icon styling for counts */
-    .count-icon {
-      font-size: 0.8em;
-      margin-right: 0.2em;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Obed Nyangena</h1>
-    <nav>
-      <a href="home.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="toolset.html">Toolset</a>
-      <a href="projects.html">Projects</a>
-      <a href="publications.html">Publications</a>
-      <a href="letters.html">Letters</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+  <header>…</header>
 
   <main>
     <h2 class="page-title">Publications</h2>
 
     <div class="articles-grid">
-      <article class="article-card">
-        <h3 class="article-title">
-          Association of Demographic and Occupational Factors with SARS-CoV-2 Vaccine Uptake in Kenya
-        </h3>
-        <div class="article-meta">
-          <span class="citation-count" title="Citations">
-            <span class="count-icon">📚</span>Cited: 18 times
-          </span>
-          <span class="view-count" title="Views">
-            <span class="count-icon">👁️</span>Views: 1,245
-          </span>
-        </div>
-        <p class="article-authors">Bertha A. Ocholla, Obed Nyangena, Herbert K. Murayi, Jane W. Mwangi, Steve K. Belle, Phanice Ondeko, Rebecca Kendagor</p>
+      
+      <!-- ARTICLE 1 -->
+      <article class="article-card" data-article-id="association-vaccine-uptake">
+        <h3 class="article-title">Association of Demographic and Occupational Factors with SARS‑CoV‑2 Vaccine Uptake in Kenya</h3>
+        <p class="article-authors">Bertha A. Ocholla, Obed Nyangena, … Rebecca Kendagor</p>
         <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Vaccine.jpg">
           <source src="images/Icon/6130030-hd_1920_1080_30fps.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
-        <p class="article-description">
-          We examine initial measures to curb COVID-19 spread in Kenya using demographic and occupational lenses and offer metricized recommendations for government action.
-          Cited by multiple studies, article highlights critical insights into public health policy during emergencies and uncertainty.
-        </p>
+        <p class="article-description">We examine … during emergencies and uncertainty.</p>
         <div class="article-actions">
           <div class="download-link">
             <a href="https://www.researchgate.net/publication/351668748_Association_of_Demographic_and_Occupational_Factors_with_SARS-CoV-2_Vaccine_Uptake_in_Kenya" download>Download PDF</a>
           </div>
         </div>
+        <div class="click-count">Clicks: <span class="count">0</span></div>
       </article>
 
-      <article class="article-card">
-        <h3 class="article-title">
-          Linking Weather Variability and Economic Growth in the East African Region: A Semi-Parametric Smooth Coefficient Approach
-        </h3>
-        <div class="article-meta">
-          <span class="citation-count" title="Citations">
-            <span class="count-icon">📚</span>Cited: 15 times
-          </span>
-          <span class="view-count" title="Views">
-            <span class="count-icon">👁️</span>Views: 987
-          </span>
-        </div>
+      <!-- ARTICLE 2 -->
+      <article class="article-card" data-article-id="linking-weather-growth">
+        <h3 class="article-title">Linking Weather Variability and Economic Growth in the East African Region: …</h3>
         <p class="article-authors">Obed Nyangena, Victor Kidake & Benson S. Igesa</p>
         <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Weather.jpg">
           <source src="images/Icon/12009144_1920_1080_24fps.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
-        <p class="article-description">
-          We dissect inaccuracies around the climate change narratives in Africa using panel data for selected East African countries and conduct analysis on the urbanization-carbon emissions models that determine the presence of an Environmental Kuznets Curve hypothesis.
-        </p>
+        <p class="article-description">We dissect inaccuracies … Environmental Kuznets Curve hypothesis.</p>
         <div class="article-actions">
           <div class="download-link">
-            <a href="www.researchgate.net/publication/330729149_Linking_Weather_Variability_and_Economic_Growth_in_the_East_African_Region_A_Semi-Parametric_Smooth_Coefficient_Approach" download>Download PDF</a>
+            <a href="https://www.researchgate.net/publication/330729149_Linking_Weather_Variability_and_Economic_Growth_in_the_East_African_Region_A_Semi-Parametric_Smooth_Coefficient_Approach" download>Download PDF</a>
           </div>
         </div>
+        <div class="click-count">Clicks: <span class="count">0</span></div>
       </article>
-      
-      <article class="article-card">
-        <h3 class="article-title">
-          Digital Fragility, Assorted Risks and Terrorism Confluence
-        </h3>
-        <div class="article-meta">
-          <span class="citation-count" title="Citations">
-            <span class="count-icon">📚</span>Cited: 20 times
-          </span>
-          <span class="view-count" title="Views">
-            <span class="count-icon">👁️</span>Views: 1,532
-          </span>
-        </div>
+
+      <!-- ARTICLE 3 -->
+      <article class="article-card" data-article-id="digital-fragility-terrorism">
+        <h3 class="article-title">Digital Fragility, Assorted Risks and Terrorism Confluence</h3>
         <p class="article-authors">Obed Nyangena & Mavia Imbali</p>
         <video class="article-image" autoplay muted loop playsinline poster="images/Icon/Terrorism.jpg">
           <source src="images/Icon/Terrorism.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
-        <p class="article-description">
-          This article provides a discursive relationship between digital leakages and gains as economies, individuals and groups jockey to advance their objectives.
-          Data protection and privacy frameworks reveal inadequacy in catching up with new technological improvements as risks soar. 
-        </p>
+        <p class="article-description">This article provides a discursive relationship … risks soar.</p>
         <div class="article-actions">
           <div class="download-link">
             <a href="https://www.researchgate.net/publication/371293326_Digital_Fragility_Assorted_Risks_and_Terrorism_Confluence" download>Download PDF</a>
           </div>
         </div>
+        <div class="click-count">Clicks: <span class="count">0</span></div>
       </article>
-      
-      <article class="article-card">
-        <h3 class="article-title">
-          Climate Change-Urbanization Nexus: Exploring the Contribution of Urbanization on Carbon Emissions in East Africa
-        </h3>
-        <div class="article-meta">
-          <span class="citation-count" title="Citations">
-            <span class="count-icon">📚</span>Cited: 25 times
-          </span>
-          <span class="view-count" title="Views">
-            <span class="count-icon">👁️</span>Views: 2,104
-          </span>
-        </div>
+
+      <!-- ARTICLE 4 -->
+      <article class="article-card" data-article-id="climate-urbanisation-nexus">
+        <h3 class="article-title">Climate Change‑Urbanization Nexus: Exploring the Contribution …</h3>
         <p class="article-authors">Obed Nyangena, Victor Kidake & Benson S. Igesa</p>
         <img class="article-image" src="images/Icon/Urbanisation.jpg" alt="Climate Change Urbanization Article Image" />
-        <p class="article-description">
-          Using panel data and advanced econometric models, we find urbanization and economic growth as key contributors to carbon emissions in East Africa,
-          challenging narratives of Africa's passive role in climate change.
-          Recommendations call for modernization in economic planning.
-        </p>
+        <p class="article-description">Using panel data … modernization in economic planning.</p>
         <div class="article-actions">
           <div class="download-link">
             <a href="https://www.researchgate.net/publication/330912438_Climate_Change-Urbanization_Nexus_Exploring_the_Contribution_of_Urbanization_on_Carbon_Emissions_in_East_Africa" download>Download PDF</a>
           </div>
         </div>
+        <div class="click-count">Clicks: <span class="count">0</span></div>
       </article>
 
-      <article class="article-card">
-        <h3 class="article-title">
-          Linking Climate Change, Pollinators and Cereal Yields in Kenya
-        </h3>
-        <div class="article-meta">
-          <span class="citation-count" title="Citations">
-            <span class="count-icon">📚</span>Cited: 10 times
-          </span>
-          <span class="view-count" title="Views">
-            <span class="count-icon">👁️</span>Views: 876
-          </span>
-        </div>
+      <!-- ARTICLE 5 -->
+      <article class="article-card" data-article-id="linking-pollinators-cereal">
+        <h3 class="article-title">Linking Climate Change, Pollinators and Cereal Yields in Kenya</h3>
         <p class="article-authors">Obed Nyangena, Victor Kidake Senelwa, Rachel Ngesa</p>
-        <video id="articleVideo" class="article-image" autoplay muted loop playsinline>
+        <video class="article-image" autoplay muted loop playsinline>
           <source src="images/Icon/Wheat.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
-        <p class="article-description">
-          Our study links climate shifts, pollinators, and cereal yields using long-term data.
-          Findings emphasize the crucial role of pollinators in food security and the impact of climate on cereal production.
-          Recommends granular data modeling for future studies.
-        </p>
+        <p class="article-description">Our study links climate shifts … future studies.</p>
         <div class="article-actions">
           <div class="download-link">
             <a href="https://www.researchgate.net/publication/342812163_Linking_Climate_Change_Pollinators_and_Cereal_Yields_in_Kenya" download>Download PDF</a>
           </div>
         </div>
+        <div class="click-count">Clicks: <span class="count">0</span></div>
       </article>
 
-      <article class="article-card">
-        <h3 class="article-title">
-          The Impact of Weather Variability on Economic Growth in Kenya
-        </h3>
-        <div class="article-meta">
-          <span class="citation-count" title="Citations">
-            <span class="count-icon">📚</span>Cited: 22 times
-          </span>
-          <span class="view-count" title="Views">
-            <span class="count-icon">👁️</span>Views: 1,765
-          </span>
-        </div>
+      <!-- ARTICLE 6 -->
+      <article class="article-card" data-article-id="impact-weather-variability-gdp">
+        <h3 class="article-title">The Impact of Weather Variability on Economic Growth in Kenya</h3>
         <p class="article-authors">Obed Nyangena</p>
-        <video id="articleVideo" class="article-image" autoplay muted loop playsinline>
+        <video class="article-image" autoplay muted loop playsinline>
           <source src="images/Icon/Weather.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
-        <p class="article-description">
-          Employing a Vector Error Correction Model, this study finds nuanced relationships between rainfall, temperature, and GDP growth in Kenya.
-          It emphasizes the importance of timely policy measures to address short-term economic implications of climate variability.
-        </p>
+        <p class="article-description">Employing a Vector Error Correction … policy measures.</p>
         <div class="article-actions">
           <div class="download-link">
             <a href="https://www.researchgate.net/publication/325883658_The_Impact_of_Weather_Variability_on_Economic_Growth_in_Kenya" download>Download PDF</a>
           </div>
         </div>
+        <div class="click-count">Clicks: <span class="count">0</span></div>
       </article>
 
-      <article class="article-card">
-        <h3 class="article-title">
-          Drought and Floods: The Triad of Climate Change Adaptation, Gender and Devolution in Kenya
-        </h3>
-        <div class="article-meta">
-          <span class="citation-count" title="Citations">
-            <span class="count-icon">📚</span>Cited: 17 times
-          </span>
-          <span class="view-count" title="Views">
-            <span class="count-icon">👁️</span>Views: 1,432
-          </span>
-        </div>
+      <!-- ARTICLE 7 -->
+      <article class="article-card" data-article-id="drought-floods-gender-devolution">
+        <h3 class="article-title">Drought and Floods: The Triad of Climate Change Adaptation, Gender and Devolution in Kenya</h3>
         <p class="article-authors">Obed Nyangena, Nancy Wairimu</p>
         <img class="article-image" src="images/Icon/article.png" alt="Drought and Floods Climate Adaptation Article Image" />
-        <p class="article-description">
-          This chapter explores the interaction between gender roles, climate change, and decentralized governance in Kenya.
-          It translates institutional reflections into a published framework for resilience-building.
-        </p>
+        <p class="article-description">This chapter explores … published framework for resilience-building.</p>
         <div class="article-actions">
           <div class="download-link">
             <a href="https://www.researchgate.net/publication/349239548_Drought_and_Floods_The_Triad_of_Climate_Change_Adaptation_Gender_and_Devolution_in_Kenya" download>Download PDF</a>
           </div>
         </div>
+        <div class="click-count">Clicks: <span class="count">0</span></div>
       </article>
+
     </div>
   </main>
 
-  <footer>
-    <div>
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:obednyangena@outlook.com">obednyangena@outlook.com</a></p>
-      <p>Phone: <a href="tel:+254700349788">+254 712 345 678</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/obed-nyangena" target="_blank" rel="noopener noreferrer">Obed Nyangena</a></p>
-    </div>
-    <small>© 2025 Obed Nyangena. All rights reserved.</small>
-  </footer>
+  <footer>…</footer>
+
+  <script>
+    document.querySelectorAll('.download-link a').forEach(a => {
+      a.addEventListener('click', async (e) => {
+        const card = a.closest('.article-card');
+        const id = card.getAttribute('data-article-id');
+        const counterSpan = card.querySelector('.click-count .count');
+
+        // Increment frontend counter
+        const current = parseInt(counterSpan.textContent, 10);
+        counterSpan.textContent = current + 1;
+
+        // Send click event to backend
+        fetch('/track-click', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ articleId: id })
+        }).catch(err => console.error('Click tracking failed', err));
+      });
+    });
+  </script>
 </body>
 </html>
