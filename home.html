@@ -15,18 +15,24 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #1a1a1a;
+      background-color: #f5f1e6;
+      color: #3a2c1a;
       line-height: 1.6;
+      position: relative;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 800" preserveAspectRatio="none"><path fill="%23e8d8b5" d="M0 0h1200v800H0z"/><path d="M0 200 Q300 150 600 250 T1200 200 L1200 0 L0 0 Z" fill="%23d4c29a" opacity="0.3"/><path d="M0 400 Q300 350 600 450 T1200 400 L1200 200 L0 200 Z" fill="%23d4c29a" opacity="0.2"/><path d="M0 600 Q300 550 600 650 T1200 600 L1200 400 L0 400 Z" fill="%23d4c29a" opacity="0.1"/><g fill="%233a2c1a" opacity="0.1"><path d="M100 700 L120 650 L140 700 L160 650 L180 700 L200 650 L220 700 L240 650 L260 700 L280 650 L300 700 L320 650 L340 700 L360 650 L380 700 L400 650 L420 700 L440 650 L460 700 L480 650 L500 700 L520 650 L540 700 L560 650 L580 700 L600 650 L620 700 L640 650 L660 700 L680 650 L700 700 L720 650 L740 700 L760 650 L780 700 L800 650 L820 700 L840 650 L860 700 L880 650 L900 700 L920 650 L940 700 L960 650 L980 700 L1000 650 L1020 700 L1040 650 L1060 700 L1080 650 L1100 700 L1120 650 L1140 700 L1160 650 L1180 700 L1200 650 L1200 800 L0 800 Z"/></g></svg>');
+      background-size: cover;
+      background-attachment: fixed;
     }
 
     header {
-      background-color: #111827;
-      color: white;
+      background-color: #3a2c1a;
+      color: #f5f1e6;
       padding: 1.5rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+      z-index: 10;
     }
 
     header h1 {
@@ -36,7 +42,7 @@
     }
 
     nav a {
-      color: white;
+      color: #f5f1e6;
       margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 500;
@@ -50,19 +56,36 @@
     .hero {
       text-align: center;
       padding: 6rem 2rem;
-      background: linear-gradient(to right, #e0f7fa, #fff);
+      background: rgba(245, 241, 230, 0.85);
+      position: relative;
+      margin: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(58, 44, 26, 0.1);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 1px solid rgba(58, 44, 26, 0.1);
+      border-radius: 4px;
+      pointer-events: none;
     }
 
     .hero h2 {
       font-size: 2.8rem;
       font-weight: 800;
       margin-bottom: 1rem;
-      color: #1d3557;
+      color: #3a2c1a;
     }
 
     .hero p {
       font-size: 1.2rem;
-      color: #333;
+      color: #5a4a30;
     }
 
     .sections {
@@ -71,25 +94,43 @@
       justify-content: center;
       padding: 4rem 2rem;
       gap: 2rem;
-      background-color: #f9f9f9;
+      background-color: rgba(245, 241, 230, 0.8);
+      margin: 2rem;
+      border-radius: 8px;
+      position: relative;
     }
 
     .card {
       background: #fff;
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 2rem;
       max-width: 320px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
       text-align: left;
       transition: transform 0.3s ease;
+      border: 1px solid rgba(58, 44, 26, 0.1);
+      background-color: rgba(255, 255, 255, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(to right, #8b5a2b, #d4a76a);
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
 
     .card h3 {
-      color: #1d3557;
+      color: #3a2c1a;
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
@@ -98,23 +139,53 @@
       display: inline-block;
       margin-top: 1rem;
       padding: 0.6rem 1.2rem;
-      background-color: #1d3557;
+      background-color: #8b5a2b;
       color: #fff;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 4px;
       font-weight: 600;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      border: 1px solid #6d4622;
     }
 
     .btn:hover {
-      background-color: #457b9d;
+      background-color: #6d4622;
+      transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #111827;
-      color: white;
+      background-color: #3a2c1a;
+      color: #f5f1e6;
+      position: relative;
+    }
+
+    /* Baobab tree decorations */
+    .baobab-left {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 150px;
+      height: 300px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 200"><path d="M50 200 L45 150 Q50 120 55 150 L50 200 Z" fill="%233a2c1a"/><path d="M50 150 Q30 100 20 80 Q10 60 15 40 Q20 20 30 10 Q40 0 50 5 Q60 0 70 10 Q80 20 85 40 Q90 60 80 80 Q70 100 50 150 Z" fill="%233a2c1a" opacity="0.8"/></svg>');
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      opacity: 0.15;
+      z-index: 1;
+    }
+
+    .baobab-right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 200px;
+      height: 350px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 230"><path d="M60 230 L55 180 Q60 150 65 180 L60 230 Z" fill="%233a2c1a"/><path d="M60 180 Q40 130 30 110 Q20 90 25 70 Q30 50 40 40 Q50 30 60 35 Q70 30 80 40 Q90 50 95 70 Q100 90 90 110 Q80 130 60 180 Z" fill="%233a2c1a" opacity="0.8"/></svg>');
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      opacity: 0.15;
+      z-index: 1;
     }
 
     @media (max-width: 768px) {
@@ -127,17 +198,34 @@
         margin-top: 1rem;
       }
 
+      .hero {
+        margin: 1rem;
+        padding: 3rem 1rem;
+      }
+
       .hero h2 {
         font-size: 2rem;
+      }
+
+      .sections {
+        margin: 1rem;
+        padding: 2rem 1rem;
       }
 
       .card {
         max-width: 100%;
       }
+
+      .baobab-left, .baobab-right {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="baobab-left"></div>
+  <div class="baobab-right"></div>
+
   <header>
     <h1>Obed Nyangena</h1>
     <nav>
