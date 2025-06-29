@@ -16,12 +16,12 @@
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #ffffff;
-      color: #1a1a1a;
+      color: #111111; /* Darker text */
       line-height: 1.6;
     }
 
     header {
-      background-color: #111827;
+      background-color: #0a3a6d; /* Darker Yale blue */
       color: white;
       padding: 1.5rem 2rem;
       display: flex;
@@ -50,19 +50,20 @@
     .hero {
       text-align: center;
       padding: 6rem 2rem;
-      background: linear-gradient(to right, #e0f7fa, #fff);
+      background-color: #f5f5f5; /* Slightly darker gray */
+      border-bottom: 1px solid #d0d0d0;
     }
 
     .hero h2 {
       font-size: 2.8rem;
       font-weight: 800;
       margin-bottom: 1rem;
-      color: #1d3557;
+      color: #0a3a6d; /* Darker header blue */
     }
 
     .hero p {
       font-size: 1.2rem;
-      color: #333;
+      color: #444444; /* Darker gray */
     }
 
     .sections {
@@ -71,50 +72,90 @@
       justify-content: center;
       padding: 4rem 2rem;
       gap: 2rem;
-      background-color: #f9f9f9;
+      background-color: #ffffff;
     }
 
     .card {
-      background: #fff;
-      border-radius: 12px;
+      background: #ffffff;
+      border-radius: 8px;
       padding: 2rem;
       max-width: 320px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       text-align: left;
       transition: transform 0.3s ease;
+      border-top: 4px solid;
+    }
+
+    /* Consulting - Darker Blue */
+    .card:nth-child(1) {
+      border-top-color: #0a3a6d;
+    }
+    .card:nth-child(1) h3 {
+      color: #0a3a6d;
+    }
+    .card:nth-child(1) .btn {
+      background-color: #0a3a6d;
+    }
+    .card:nth-child(1) .btn:hover {
+      background-color: #14508b;
+    }
+
+    /* Speaking - Darker Teal */
+    .card:nth-child(2) {
+      border-top-color: #00605d;
+    }
+    .card:nth-child(2) h3 {
+      color: #00605d;
+    }
+    .card:nth-child(2) .btn {
+      background-color: #00605d;
+    }
+    .card:nth-child(2) .btn:hover {
+      background-color: #007a77;
+    }
+
+    /* Collaborations - Darker Gold */
+    .card:nth-child(3) {
+      border-top-color: #9e7a4d;
+    }
+    .card:nth-child(3) h3 {
+      color: #9e7a4d;
+    }
+    .card:nth-child(3) .btn {
+      background-color: #9e7a4d;
+    }
+    .card:nth-child(3) .btn:hover {
+      background-color: #b38b59;
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     }
 
     .card h3 {
-      color: #1d3557;
       font-size: 1.5rem;
       margin-bottom: 1rem;
+      font-weight: 600;
     }
 
     .btn {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.6rem 1.2rem;
-      background-color: #1d3557;
       color: #fff;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 4px;
       font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #457b9d;
+      transition: all 0.3s ease;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #111827;
+      background-color: #0a3a6d; /* Darker blue */
       color: white;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
