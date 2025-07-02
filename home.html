@@ -15,13 +15,13 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #cce6ff; /* Soft light blue like the image background */
-      color: #083b66; /* Dark navy text for good contrast */
+      background-color: #d7ecff; /* Britannica background */
+      color: #083b66; /* Britannica deep navy for text */
       line-height: 1.6;
     }
 
     header {
-      background-color: #083b66; /* Deep blue like the 'Britannica' text */
+      background-color: #083b66; /* Navy header */
       color: #ffffff;
       padding: 1.5rem 2rem;
       display: flex;
@@ -36,7 +36,7 @@
     }
 
     nav a {
-      color: white;
+      color: #ffffff;
       margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 500;
@@ -44,26 +44,29 @@
     }
 
     nav a:hover {
-      opacity: 0.7;
+      opacity: 0.7; /* Subtle fade, no new color */
     }
 
     .hero {
       text-align: center;
       padding: 6rem 2rem;
-      background-color: #ffffff; /* White background for the hero to mimic the fact card */
-      border-bottom: 1px solid #b3d7f5; /* Subtle border */
+      background-color: #ffffff; /* White card area */
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 3rem auto;
+      box-shadow: 6px 6px 0 #083b66; /* Navy shadow */
     }
 
     .hero h2 {
       font-size: 2.8rem;
       font-weight: 800;
       margin-bottom: 1rem;
-      color: #083b66; /* Main dark blue for headings */
+      color: #083b66;
     }
 
     .hero p {
       font-size: 1.2rem;
-      color: #083b66; /* Consistent dark blue for text */
+      color: #083b66;
     }
 
     .sections {
@@ -72,53 +75,53 @@
       justify-content: center;
       padding: 4rem 2rem;
       gap: 2rem;
-      background-color: #cce6ff; /* Match page background */
+      background-color: #d7ecff; /* Match page background */
     }
 
     .card {
-      background: #ffffff; /* White card like the fact box */
+      background: #ffffff; /* White card */
       border-radius: 12px;
       padding: 2rem;
       max-width: 320px;
-      box-shadow: 4px 4px 0 #083b66; /* Slight shadow for depth, echoing text shadow style */
+      box-shadow: 4px 4px 0 #083b66; /* Navy shadow */
       text-align: left;
       transition: transform 0.3s ease;
-      border-top: 4px solid #083b66; /* Dark blue border top */
+      border-top: 4px solid #083b66; /* Navy border top */
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 6px 6px 0 #083b66; /* Lift effect */
+      box-shadow: 6px 6px 0 #083b66;
     }
 
     .card h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
       font-weight: 600;
-      color: #083b66; /* Dark blue headings */
+      color: #083b66;
     }
 
     .btn {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.6rem 1.2rem;
-      background-color: #083b66; /* Dark blue button */
+      background-color: #083b66; /* Navy button */
       color: #ffffff;
       text-decoration: none;
       border-radius: 4px;
       font-weight: 600;
-      transition: all 0.3s ease;
+      transition: opacity 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #005099; /* Slightly brighter hover blue */
+      opacity: 0.85; /* Slight fade, same navy */
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #083b66; /* Match header */
-      color: white;
+      background-color: #083b66; /* Navy footer */
+      color: #ffffff;
       font-size: 0.9rem;
     }
 
