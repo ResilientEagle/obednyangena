@@ -15,14 +15,14 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #111111; /* Darker text */
+      background-color: #cce6ff; /* Soft light blue like the image background */
+      color: #083b66; /* Dark navy text for good contrast */
       line-height: 1.6;
     }
 
     header {
-      background-color: #0a3a6d; /* Darker Yale blue */
-      color: white;
+      background-color: #083b66; /* Deep blue like the 'Britannica' text */
+      color: #ffffff;
       padding: 1.5rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -50,20 +50,20 @@
     .hero {
       text-align: center;
       padding: 6rem 2rem;
-      background-color: #f5f5f5; /* Slightly darker gray */
-      border-bottom: 1px solid #d0d0d0;
+      background-color: #ffffff; /* White background for the hero to mimic the fact card */
+      border-bottom: 1px solid #b3d7f5; /* Subtle border */
     }
 
     .hero h2 {
       font-size: 2.8rem;
       font-weight: 800;
       margin-bottom: 1rem;
-      color: #0a3a6d; /* Darker header blue */
+      color: #083b66; /* Main dark blue for headings */
     }
 
     .hero p {
       font-size: 1.2rem;
-      color: #444444; /* Darker gray */
+      color: #083b66; /* Consistent dark blue for text */
     }
 
     .sections {
@@ -72,88 +72,52 @@
       justify-content: center;
       padding: 4rem 2rem;
       gap: 2rem;
-      background-color: #ffffff;
+      background-color: #cce6ff; /* Match page background */
     }
 
     .card {
-      background: #ffffff;
-      border-radius: 8px;
+      background: #ffffff; /* White card like the fact box */
+      border-radius: 12px;
       padding: 2rem;
       max-width: 320px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      box-shadow: 4px 4px 0 #083b66; /* Slight shadow for depth, echoing text shadow style */
       text-align: left;
       transition: transform 0.3s ease;
-      border-top: 4px solid;
-    }
-
-    /* Consulting - Darker Blue */
-    .card:nth-child(1) {
-      border-top-color: #0a3a6d;
-    }
-    .card:nth-child(1) h3 {
-      color: #0a3a6d;
-    }
-    .card:nth-child(1) .btn {
-      background-color: #0a3a6d;
-    }
-    .card:nth-child(1) .btn:hover {
-      background-color: #14508b;
-    }
-
-    /* Speaking - Darker Teal */
-    .card:nth-child(2) {
-      border-top-color: #00605d;
-    }
-    .card:nth-child(2) h3 {
-      color: #00605d;
-    }
-    .card:nth-child(2) .btn {
-      background-color: #00605d;
-    }
-    .card:nth-child(2) .btn:hover {
-      background-color: #007a77;
-    }
-
-    /* Collaborations - Darker Gold */
-    .card:nth-child(3) {
-      border-top-color: #9e7a4d;
-    }
-    .card:nth-child(3) h3 {
-      color: #9e7a4d;
-    }
-    .card:nth-child(3) .btn {
-      background-color: #9e7a4d;
-    }
-    .card:nth-child(3) .btn:hover {
-      background-color: #b38b59;
+      border-top: 4px solid #083b66; /* Dark blue border top */
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      box-shadow: 6px 6px 0 #083b66; /* Lift effect */
     }
 
     .card h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
       font-weight: 600;
+      color: #083b66; /* Dark blue headings */
     }
 
     .btn {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.6rem 1.2rem;
-      color: #fff;
+      background-color: #083b66; /* Dark blue button */
+      color: #ffffff;
       text-decoration: none;
       border-radius: 4px;
       font-weight: 600;
       transition: all 0.3s ease;
     }
 
+    .btn:hover {
+      background-color: #005099; /* Slightly brighter hover blue */
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #0a3a6d; /* Darker blue */
+      background-color: #083b66; /* Match header */
       color: white;
       font-size: 0.9rem;
     }
@@ -188,7 +152,7 @@
       <a href="projects.html">Projects</a>
       <a href="publications.html">Publications</a>
       <a href="letters.html">Letters</a>
-      <a href="#">contact</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
